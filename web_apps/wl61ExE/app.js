@@ -27,13 +27,13 @@ $.ajax({
 });        
         
 
-//Ensure only one country can be selected when uploading a file
-//$('.file-list').on('change', function() {
- //   $('.file-list').not(this).prop('checked', false);  
-//});
+//Ensure only one file can be selected when uploading a file
+$('.file-list').on('change', function() {
+    $('.file-list').not(this).prop('checked', false);  
+});
 
 
-let countrySection = document.getElementById('countries-section');
+let fileSection = document.getElementById('files-section');
 let uploadSection = document.getElementById('upload-section');
 let uploadResults = document.getElementById('message');
 let submitSection = document.getElementById('submit-section');
