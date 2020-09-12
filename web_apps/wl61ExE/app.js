@@ -28,9 +28,9 @@ $.ajax({
         
 
 //Ensure only one country can be selected when uploading a file
-$('.file-list').on('change', function() {
-    $('.file-list').not(this).prop('checked', false);  
-});
+//$('.file-list').on('change', function() {
+ //   $('.file-list').not(this).prop('checked', false);  
+//});
 
 
 let countrySection = document.getElementById('countries-section');
