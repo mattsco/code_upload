@@ -13,7 +13,7 @@ client = dataiku.api_client()
 
 
 var = dataiku.get_custom_variables()
-archive_folder = var["file_list"] 
+archive_folder = var["archive_folder"] 
 tracking_folder = var["tracking_folder"] 
 default_file_extension = var["default_file_extension"] 
 file_list = var["file_list"] 
