@@ -17,7 +17,7 @@ archive_folder = var["file_list"]
 tracking_folder = var["tracking_folder"] 
 default_file_extension = var["default_file_extension"] 
 file_list = var["file_list"] 
-global archive_folder, tracking_folder, default_file_extension, file_list
+
 
 @app.route('/load_params')
 def load_params():
