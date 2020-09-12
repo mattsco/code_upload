@@ -51,7 +51,7 @@ def upload_to_dss():
     hour = now.strftime("%H%M%S")
        
     selected_file = request.form.get('selected_file')
-    dss_filename = '%s_%s_%s_%s_%s%s' %(day, hour, selected_file, user, extension)
+    dss_filename = '%s_%s_%s_%s%s' %(day, hour, selected_file, user, extension)
     
     
     try:
