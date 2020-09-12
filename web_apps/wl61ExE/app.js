@@ -56,12 +56,12 @@ $('#upload-button').click(function() {
     }
 
     
-    selected_file = document.getElementById('country-select').value
+    selected_file = document.getElementById('file-select').value
     comment = commentsInput.value
     let newFile = $('#new-file')[0].files[0];
     let form = new FormData();
     form.append('file', newFile);
-    form.append('country', selected_file);
+    form.append('selected_file', selected_file);
     form.append('comments',  comment);
     
     $.ajax({

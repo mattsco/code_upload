@@ -50,9 +50,8 @@ def upload_to_dss():
     day = now.strftime("%Y%m%d")
     hour = now.strftime("%H%M%S")
        
-    country = request.form.get('country')
-    customer_type = request.form.get('customer_type')
-    dss_filename = '%s_%s_%s_%s_%s%s' %(day, hour, country, customer_type, user, extension)
+    selected_file = request.form.get('selected_file')
+    dss_filename = '%s_%s_%s_%s_%s%s' %(day, hour, selected_file, user, extension)
     
     
     try:
