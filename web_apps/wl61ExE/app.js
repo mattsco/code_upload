@@ -91,7 +91,7 @@ $(document).ready(function(){
 $('#upload-button').click(function() {
     
     if (document.getElementById('country-select').value == ""){
-        uploadResults.innerHTML = "You must select a country first"
+        uploadResults.innerHTML = "You must select a type file first"
         uploadResults.style.color = "red"
         submitSection.style.display = "none"
         return
@@ -104,7 +104,7 @@ $('#upload-button').click(function() {
     let form = new FormData();
     form.append('file', newFile);
     form.append('country', selected_country);
-
+    form.append('comments',  commentsInput.value);
     $.ajax({
         type: 'post',
         url: getWebAppBackendUrl('/upload-to-dss'),
@@ -115,7 +115,7 @@ $('#upload-button').click(function() {
             results = JSON.parse(data)
             console.log(results);
             if (results["status"] == "ok"){
-                uploadResults.innerHTML = "Upload successful - Please submit your results"
+                uploadResults.innerHTML = "Upload successful"
                 uploadResults.style.color = "green"
                 submitSection.style.display = "block"
                                 
@@ -131,7 +131,7 @@ $('#upload-button').click(function() {
                     }
                 }
                 window["submit_params"] = submit_dict
-                submitParams.innerHTML = submit_txt
+                uploadResults.innerHTML = submit_txt
             }
             else {
                 uploadResults.innerHTML = "Upload failed - " + results["status"]
