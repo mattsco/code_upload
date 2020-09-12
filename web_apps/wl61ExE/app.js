@@ -23,7 +23,7 @@ $.ajax({
         f_html_upload = f_html_upload + html_upload
     })
     document.getElementById('file-select').innerHTML = f_html_upload
-});        
+});
         
 
 //Ensure only one file can be selected when uploading a file
