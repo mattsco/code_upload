@@ -24,11 +24,10 @@ $.ajax({
     webapp_params = {
         archive_folder:data.standard["archive_folder"],
         tracking_folder:data.standard["tracking_folder"],
-        countries:data.standard["countries"],
         file_list:data.standard["file_list"],
         default_file_extension:data.standard["default_file_extension"]
     }
-    console.log(webapp_params)
+    console.log("webapp_params:",webapp_params);
     
     $.getJSON(getWebAppBackendUrl('/load_params'),
                 webapp_params,
@@ -73,8 +72,6 @@ let submitResults = document.getElementById('submit-results');
 
 
 var submit_params = {}
-
-
 
 
 $('#upload-button').click(function() {
