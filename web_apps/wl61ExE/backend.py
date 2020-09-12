@@ -13,7 +13,7 @@ client = dataiku.api_client()
 
 @app.route('/load_params')
 def load_params():
-    print request.args
+
     global archive_folder, tracking_folder, countries, default_file_extension
     archive_folder = request.args.get('archive_folder')
     tracking_folder = request.args.get('tracking_folder')
