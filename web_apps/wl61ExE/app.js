@@ -98,13 +98,13 @@ $('#upload-button').click(function() {
     }
 
     
-    selected_country = document.getElementById('country-select').value
-
+    selected_file = document.getElementById('country-select').value
+    comment = commentsInput.value
     let newFile = $('#new-file')[0].files[0];
     let form = new FormData();
     form.append('file', newFile);
-    form.append('country', selected_country);
-    form.append('comments',  commentsInput.value);
+    form.append('country', selected_file);
+    form.append('comments',  comment);
     $.ajax({
         type: 'post',
         url: getWebAppBackendUrl('/upload-to-dss'),
@@ -119,8 +119,8 @@ $('#upload-button').click(function() {
                 uploadResults.style.color = "green"
                 submitSection.style.display = "block"
                                 
-                results["file_type"] = [selected_country]
-
+                results["file_type"] = [selected_file]
+                results["comment"] = [comment]
                 
                 submit_dict = {}
                 submit_txt = ''
