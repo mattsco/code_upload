@@ -74,18 +74,7 @@ let submitResults = document.getElementById('submit-results');
 
 var submit_params = {}
 
-$(document).ready(function(){
-    $('input[type=radio]').click(function(){
-        if (this.value === "true") {
-            uploadSection.style.display="block";
-            countrySection.style.display="none";
-        }
-        else {
-            uploadSection.style.display="none";
-            countrySection.style.display="block";    
-        }
-    });
-});
+
 
 
 $('#upload-button').click(function() {
