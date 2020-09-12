@@ -115,7 +115,7 @@ $('#upload-button').click(function() {
             results = JSON.parse(data)
             console.log(results);
             if (results["status"] == "ok"){
-                uploadResults.innerHTML = "Upload successful"
+                uploadResults.innerHTML = "Upload successful <br>"
                 uploadResults.style.color = "green"
                 submitSection.style.display = "block"
                                 
@@ -131,7 +131,7 @@ $('#upload-button').click(function() {
                     }
                 }
                 window["submit_params"] = submit_dict
-                uploadResults.innerHTML = submit_txt
+                uploadResults.innerHTML += submit_txt
             }
             else {
                 uploadResults.innerHTML = "Upload failed - " + results["status"]
