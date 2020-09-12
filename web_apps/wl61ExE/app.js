@@ -22,7 +22,6 @@ $.ajax({
         f_html = f_html + html
         f_html_upload = f_html_upload + html_upload
     })
-    //document.getElementById('file-div').innerHTML = f_html
     document.getElementById('file-select').innerHTML = f_html_upload
 });        
         
@@ -33,16 +32,9 @@ $('.file-list').on('change', function() {
 });
 
 
-let fileSection = document.getElementById('files-section');
-let uploadSection = document.getElementById('upload-section');
-let uploadResults = document.getElementById('message');
-let submitSection = document.getElementById('submit-section');
-let submitParams = document.getElementById('submit-params');
-let submitButton = document.getElementById('submit-button');
-let commentsInput = document.getElementById('comments');
-let commentsTitle = document.getElementById('comments-title');
-let submitResults = document.getElementById('submit-results');
 
+let uploadResults = document.getElementById('message');
+let commentsInput = document.getElementById('comments');
 
 var submit_params = {}
 
