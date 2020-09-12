@@ -11,8 +11,6 @@
 
 </section>
 
-
-
 <section id="upload-section">
     
     <div class="fetch-dataset-container">
@@ -20,7 +18,7 @@
             <form id="form-upload" name="form-upload" novalidate>
                 <div class="field">
                     <label for="dataset-to-fetch">Select file to upload</label>
-                    <div class="select" id="countries-upload">
+                    <div class="select" id="files-upload">
                         <select id="file-select" name="dataset-column"></select>
                     </div>
                     
@@ -48,24 +46,3 @@
 </section>
 
 
-<section id="countries-section" style="display:none;">
-    <h2>Select countries with no update</h2>
-    <form id="form-sample" novalidate>
-        <div class="field" id="countries-div">You should not see this</div>
-        <button type="button" class="main-blue-button" id="validate-button">VALIDATE</button>
-    </form>
-</section>
-    
-
-<section id="submit-section" style="display:none;">
-    <h2>Submission</h2>
-    <div class="fetch-dataset-results" id="submit-results" style="display:none;">You should not see this tab</div>
-    <form id="form-sample" novalidate>
-        <div class="field">
-            <div class="fetch-dataset-results" id="submit-params">You should not see this tab</div>
-            <label for="comments" id="comments-title">Comments</label>
-            <input type="text" name="comments" id="comments"/>
-        </div>
-        <button type="button" class="main-blue-button" id="submit-button">SUBMIT</button>
-    </form>
-</section>
