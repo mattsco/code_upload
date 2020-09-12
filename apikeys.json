@@ -1,0 +1,46 @@
+[
+  {
+    "execSQLLike": false,
+    "localDatasets": [],
+    "projectPrivileges": {
+      "admin": false,
+      "readProjectContent": true,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false
+    },
+    "onBehalf": "wl61ExE",
+    "id": "NfAaEd7vFbFupMAw",
+    "key": "3L13ndhg33YQB47oTaU2FEQEbAD4uWa6",
+    "label": "Key for Web app upload-files(wl61ExE)",
+    "createdOn": 1595298709225
+  },
+  {
+    "execSQLLike": false,
+    "localDatasets": [],
+    "projectPrivileges": {
+      "admin": false,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false
+    },
+    "onBehalf": "C5uea3B",
+    "id": "bQq3LSoRnsteKEVu",
+    "key": "n1SmKakLIBBqOCA3PsRJcKZvt8d9gQgH",
+    "label": "Key for Web app hh(C5uea3B)",
+    "createdOn": 1595845079914
+  }
+]

@@ -1,0 +1,385 @@
+{
+  "preFilter": {
+    "distinct": false,
+    "enabled": false
+  },
+  "ntileValues": "10",
+  "keys": [],
+  "values": [
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "column": "country",
+      "count": false,
+      "$idx": 0,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "lead": false,
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "$selected": false,
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "initial_filename",
+      "count": false,
+      "$idx": 1,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "submission_date",
+      "count": false,
+      "$idx": 2,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "date",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "user",
+      "count": false,
+      "$idx": 3,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "outdated",
+      "count": false,
+      "$idx": 4,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "boolean",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "update",
+      "count": false,
+      "$idx": 5,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "boolean",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "dss_filename",
+      "count": false,
+      "$idx": 6,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "column": "customer_type",
+      "count": false,
+      "$idx": 7,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "lead": false,
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "$selected": false,
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "comments",
+      "count": false,
+      "$idx": 8,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "last_compute_date",
+      "count": false,
+      "$idx": 9,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "date",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    }
+  ],
+  "legacyUnboundedWindowStreamBehavior": false,
+  "windows": [
+    {
+      "windowUpperBound": 0,
+      "enablePartitioning": true,
+      "enableOrdering": true,
+      "precedingRows": 0,
+      "limitFollowing": false,
+      "orders": [
+        {
+          "column": "submission_date",
+          "desc": true
+        }
+      ],
+      "limitPreceding": false,
+      "followingRows": 0,
+      "windowLowerBound": 0,
+      "enableLimits": false,
+      "partitioningColumns": [
+        "country",
+        "customer_type"
+      ]
+    }
+  ],
+  "computedColumns": [],
+  "postFilter": {
+    "uiData": {
+      "mode": "\u0026\u0026",
+      "conditions": [
+        {
+          "input": "rank",
+          "col": "submission_date",
+          "num": 1,
+          "operator": "\u003d\u003d [number]"
+        }
+      ]
+    },
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "name": "initial_filename",
+            "type": "string"
+          },
+          {
+            "name": "submission_date",
+            "type": "date"
+          },
+          {
+            "name": "user",
+            "type": "string"
+          },
+          {
+            "name": "outdated",
+            "type": "boolean"
+          },
+          {
+            "name": "update",
+            "type": "boolean"
+          },
+          {
+            "name": "dss_filename",
+            "type": "string"
+          },
+          {
+            "name": "customer_type",
+            "type": "string"
+          },
+          {
+            "name": "comments",
+            "type": "string"
+          },
+          {
+            "name": "last_compute_date",
+            "type": "date"
+          },
+          {
+            "name": "rank",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      },
+      "validated": true,
+      "fullyTranslated": false,
+      "ok": false,
+      "message": "Filter expression is invalid"
+    },
+    "distinct": false,
+    "enabled": true
+  },
+  "cumeDist": false,
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVECLI_GLOBAL"
+    },
+    "sqlPipelineParams": {
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "skipPrerunValidate": false,
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "mode": "AUTO",
+        "autoModeRepartitionInto": 10,
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "executionEngine": "SPARK_SUBMIT",
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "ntile": false,
+  "rank": true,
+  "denseRank": false,
+  "rowNumber": false,
+  "outputColumnNameOverrides": {}
+}

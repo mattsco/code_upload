@@ -1,0 +1,31 @@
+{
+  "type": "web_app",
+  "params": {
+    "webAppSmartId": "wl61ExE",
+    "webAppType": "STANDARD",
+    "apiKey": "nq9nmGnlueli6xcJdYlJeKS9eWEg8xdT"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "upload-files",
+  "dashboardCreationId": "Jt0OrzH",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1595557113034
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1595557113034
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "type": "dataset_table",
+  "params": {
+    "datasetSmartName": "request_submitted_prepared",
+    "shakerScript": {
+      "steps": [],
+      "maxProcessedMemTableBytes": -1,
+      "columnsSelection": {
+        "mode": "SELECT",
+        "list": [
+          {
+            "name": "country",
+            "d": true
+          },
+          {
+            "name": "submission_date",
+            "d": true
+          },
+          {
+            "name": "user",
+            "d": true
+          },
+          {
+            "name": "outdated",
+            "d": true
+          },
+          {
+            "name": "update",
+            "d": true
+          },
+          {
+            "name": "dss_filename",
+            "d": false
+          },
+          {
+            "name": "initial_filename",
+            "d": false
+          },
+          {
+            "name": "comments",
+            "d": true
+          },
+          {
+            "name": "last_compute_date",
+            "d": false
+          }
+        ]
+      },
+      "columnWidthsByName": {
+        "country": 100,
+        "submission_date": 183,
+        "user": 100,
+        "outdated": 100,
+        "update": 100,
+        "dss_filename": 190,
+        "initial_filename": 253,
+        "comments": 100,
+        "last_compute_date": 183
+      },
+      "coloring": {
+        "scheme": "MEANING_AND_STATUS",
+        "individualColumns": [],
+        "valueColoringMode": "HASH"
+      },
+      "sorting": [],
+      "analysisColumnData": {},
+      "explorationSampling": {
+        "selection": {
+          "maxStoredBytes": -1,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "HEAD_SEQUENTIAL",
+          "maxRecords": 10000,
+          "targetRatio": 0.02,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        },
+        "autoRefreshSample": false,
+        "_refreshTrigger": 0
+      },
+      "vizSampling": {
+        "autoRefreshSample": false,
+        "_refreshTrigger": 0
+      },
+      "exploreUIParams": {
+        "autoRefresh": true
+      },
+      "globalSearchQuery": "",
+      "explorationFilters": [],
+      "previewMode": "ALL_ROWS"
+    }
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "request_submitted_prepared",
+  "dashboardCreationId": "Jt0OrzH",
+  "versionTag": {
+    "versionNumber": 1,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1595855793842
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1595851336046
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

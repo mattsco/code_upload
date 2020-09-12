@@ -1,0 +1,89 @@
+<link rel="stylesheet" href="/static/public/styles/1.0.0/dku-styles.css" />
+
+<h1>Results submission</h1>
+
+<section>
+    <ul>
+        <li>Write instructions here</li>
+        <li>And here</li>
+        <li>And here.</li>
+    </ul>
+
+</section>
+
+
+<section id="update-section">
+    <h2>Do you have any updates to perform?</h2>
+    <form id="form-isupdate" novalidate>
+        <div class="field">
+            <div class="radio">
+                <input type="radio" name="is-update" value="true" id="update-yes" checked="checked" />
+                <label for="update-yes">Upload a file for updates</label>
+            </div>
+            <div class="radio">
+                    <input type="radio" name="is-update" value="false" id="update-no" />
+                <label for="update-no">No updates for this periode</label>
+            </div>
+        </div>
+    </form>
+</section>
+
+
+<section id="upload-section">
+    <h2>Upload your file</h2>
+    
+    <div class="fetch-dataset-container">
+        <section class="fetch-dataset-form">
+            <form id="form-upload" name="form-upload" novalidate>
+                <div class="field">
+                    <label for="dataset-to-fetch">Select a country</label>
+                    <div class="select" id="countries-upload">
+                        <select id="country-select" name="dataset-column"></select>
+                    </div>
+                    
+                    <label for="dataset-to-fetch">Select the type of customers (listed/unlisted)</label>
+                    <div class="select">
+                        <select id="listed-select">
+                            <option value='' selected disabled hidden>Choose an option</option>
+                            <option value="listed">Listed</option>
+                            <option value="unlisted">Unlisted</option>
+                        </select>
+                    </div>
+                    
+                    <label for="dataset-to-fetch">Select a file from your computer</label>
+                    <input class="form-control" id="new-file" type="file" />
+                    <button type="button" class="main-blue-button" id="upload-button">UPLOAD</button>
+                    <section class="fetch-dataset-results">
+                        <span id="message">No file uploaded</span>
+                    </section>
+                    
+                </div>
+            </form>
+            
+        </section>
+
+    </div>
+</section>
+
+
+<section id="countries-section" style="display:none;">
+    <h2>Select countries with no update</h2>
+    <form id="form-sample" novalidate>
+        <div class="field" id="countries-div">You should not see this</div>
+        <button type="button" class="main-blue-button" id="validate-button">VALIDATE</button>
+    </form>
+</section>
+    
+
+<section id="submit-section" style="display:none;">
+    <h2>Submission</h2>
+    <div class="fetch-dataset-results" id="submit-results" style="display:none;">You should not see this tab</div>
+    <form id="form-sample" novalidate>
+        <div class="field">
+            <div class="fetch-dataset-results" id="submit-params">You should not see this tab</div>
+            <label for="comments" id="comments-title">Comments</label>
+            <input type="text" name="comments" id="comments"/>
+        </div>
+        <button type="button" class="main-blue-button" id="submit-button">SUBMIT</button>
+    </form>
+</section>
