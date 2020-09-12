@@ -64,8 +64,8 @@ def upload_to_dss():
 
     #Write metadata
     submission = {"status":status, "day":day, "hour":hour, "user":user, "initial_filename":f.filename, "dss_filename":dss_filename}
-    submission["file_type2"] = selected_file 
-    submission["comment2"] = comment
+    submission["file_type"] = selected_file 
+    submission["comment"] = comment
 
     try:
         dataiku.Folder(tracking_folder).upload_stream("%s_%s_%s.json"%(submission["day"], submission["hour"], submission["user"]), json.dumps(submission))
