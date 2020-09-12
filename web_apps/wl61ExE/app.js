@@ -17,40 +17,23 @@ $.ajax({
         "Authorization" : "Basic " + btoa(dataiku.defaultAPIKey + ":" + "")
     }
 }).done(function(data){
-
-    countries = data.standard["countries"]
-    window["global_countries"] = JSON.parse(countries)
-    debugger;
-    webapp_params = {
-        archive_folder:data.standard["archive_folder"],
-        tracking_folder:data.standard["tracking_folder"],
-        file_list:data.standard["file_list"],
-        default_file_extension:data.standard["default_file_extension"]
-    }
-    console.log("webapp_params:",webapp_params);
-    
-    $.getJSON(getWebAppBackendUrl('/load_params'),
-                webapp_params,
-                function(data) {
-        if (data.status == "ok"){console.log("Parameters loaded in backend")}
-        else {console.log("Parameters loading in backend failed - Check python logs")}
-    });    
-    console.log("data:",data);
-    country_html = ""
-    country_html_upload = "<option value='' selected disabled hidden>Choose a file</option>"
-    data.standard["file_list"].forEach(function(country){
+  
+    console.log("project variable:",data);
+    f_html = ""
+    f_html_upload = "<option value='' selected disabled hidden>Choose a file</option>"
+    data.standard["file_list"].forEach(function(f){
         var html = `
             <div class="checkbox">
-                <input type="checkbox" name="${country}" id="${country}" />
-                <label for="${country}">${country}</label>
+                <input type="checkbox" name="${f}" id="${f}" />
+                <label for="${f}">${f}</label>
             </div>`;
         var html_upload = `
-            <option value="${country}">${country}</option>`;
-        country_html = country_html + html
-        country_html_upload = country_html_upload + html_upload
+            <option value="${f}">${f}</option>`;
+        f_html = f_html + html
+        f_html_upload = f_html_upload + html_upload
     })
-    document.getElementById('countries-div').innerHTML = country_html
-    document.getElementById('country-select').innerHTML = country_html_upload
+    document.getElementById('countries-div').innerHTML = f_html
+    document.getElementById('country-select').innerHTML = f_html_upload
 });        
         
 
