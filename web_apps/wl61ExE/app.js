@@ -35,7 +35,7 @@ $.ajax({
         if (data.status == "ok"){console.log("Parameters loaded in backend")}
         else {console.log("Parameters loading in backend failed - Check python logs")}
     });    
-    
+    console.log(data);
     country_html = ""
     country_html_upload = "<option value='' selected disabled hidden>Choose a file</option>"
     data.standard["file_list"].forEach(function(country){

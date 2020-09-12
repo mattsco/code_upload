@@ -11,14 +11,17 @@ default_file_extension = ""
 
 client = dataiku.api_client()
 
+global archive_folder, tracking_folder, default_file_extension, file_list
+var = dataiku.get_custom_variables()
+archive_folder = var["file_list"] 
+tracking_folder = var["tracking_folder"] 
+default_file_extension = var["default_file_extension"] 
+file_list = var["file_list"] 
+
+
 @app.route('/load_params')
 def load_params():
 
-    global archive_folder, tracking_folder, countries, default_file_extension
-    archive_folder = request.args.get('archive_folder')
-    tracking_folder = request.args.get('tracking_folder')
-    default_file_extension = request.args.get('default_file_extension')
-    file_list = request.args.get('file_list')
     print("archive_folder:%s, tracking_folder:%s, default_file_extension:%s"%(archive_folder, tracking_folder, default_file_extension))
     print(file_list)
     return json.dumps({"status": "ok"})
