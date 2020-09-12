@@ -69,8 +69,8 @@ $('#upload-button').click(function() {
                 uploadResults.innerHTML = "Upload successful <br>"
                 uploadResults.style.color = "green"
                                 
-                results["file_type"] = [selected_file]
-                results["comment"] = [comment]
+                //results["file_type"] = [selected_file]
+                //results["comment"] = [comment]
                 
                 submit_dict = {}
                 submit_txt = ''
