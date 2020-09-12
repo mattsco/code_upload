@@ -13,7 +13,9 @@
     "nbProcesses": 1,
     "libraries": [
       "jquery",
-      "dataiku"
+      "dataiku",
+      "bootstrap",
+      "d3"
     ],
     "infra": {
       "containerSelection": {
@@ -37,11 +39,11 @@
   "name": "upload-files",
   "apiKey": "3L13ndhg33YQB47oTaU2FEQEbAD4uWa6",
   "versionTag": {
-    "versionNumber": 380,
+    "versionNumber": 381,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1596696886153
+    "lastModifiedOn": 1599896841899
   },
   "creationTag": {
     "versionNumber": 0,
