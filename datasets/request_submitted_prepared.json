@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1596697058076
+    "lastModifiedOn": 1599955188983
   },
   "creationTag": {
     "versionNumber": 0,
@@ -87,7 +87,23 @@
   "schema": {
     "columns": [
       {
-        "name": "country",
+        "name": "status",
+        "type": "string"
+      },
+      {
+        "name": "date",
+        "type": "date"
+      },
+      {
+        "name": "diff_date",
+        "type": "bigint"
+      },
+      {
+        "name": "outdated",
+        "type": "boolean"
+      },
+      {
+        "name": "user",
         "type": "string"
       },
       {
@@ -95,31 +111,15 @@
         "type": "string"
       },
       {
-        "name": "submission_date",
-        "type": "date"
-      },
-      {
-        "name": "user",
-        "type": "string"
-      },
-      {
-        "name": "outdated",
-        "type": "boolean"
-      },
-      {
-        "name": "update",
-        "type": "boolean"
-      },
-      {
         "name": "dss_filename",
         "type": "string"
       },
       {
-        "name": "customer_type",
+        "name": "file_type",
         "type": "string"
       },
       {
-        "name": "comments",
+        "name": "comment",
         "type": "string"
       },
       {
