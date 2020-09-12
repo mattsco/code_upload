@@ -105,6 +105,7 @@ $('#upload-button').click(function() {
     form.append('file', newFile);
     form.append('country', selected_file);
     form.append('comments',  comment);
+    
     $.ajax({
         type: 'post',
         url: getWebAppBackendUrl('/upload-to-dss'),
