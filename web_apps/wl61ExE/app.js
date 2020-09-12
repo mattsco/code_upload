@@ -119,7 +119,7 @@ $('#upload-button').click(function() {
                 uploadResults.style.color = "green"
                 submitSection.style.display = "block"
                                 
-                results["countries"] = [selected_country]
+                results["file_type"] = [selected_country]
 
                 
                 submit_dict = {}
