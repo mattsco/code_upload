@@ -49,7 +49,7 @@ var submit_params = {}
 
 $('#upload-button').click(function() {
     
-    if (document.getElementById('country-select').value == ""){
+    if (document.getElementById('file-select').value == ""){
         uploadResults.innerHTML = "You must select a type file first"
         uploadResults.style.color = "red"
         return
