@@ -39,7 +39,7 @@ $.ajax({
     
     country_html = ""
     country_html_upload = "<option value='' selected disabled hidden>Choose a file</option>"
-    file_list.forEach(function(country){
+    window["global_countries"].forEach(function(country){
         var html = `
             <div class="checkbox">
                 <input type="checkbox" name="${country}" id="${country}" />
