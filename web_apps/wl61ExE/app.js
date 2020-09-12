@@ -54,7 +54,7 @@ $('#upload-button').click(function() {
     let form = new FormData();
     form.append('file', newFile);
     form.append('selected_file', selected_file);
-    form.append('comments',  comment);
+    form.append('comment',  comment);
     
     $.ajax({
         type: 'post',

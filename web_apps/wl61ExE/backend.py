@@ -51,9 +51,10 @@ def upload_to_dss():
     hour = now.strftime("%H%M%S")
        
     selected_file = request.form.get('selected_file')
+    comment = request.form.get('comment')
     dss_filename = '%s_%s_%s_%s%s' %(day, hour, selected_file, user, extension)
     
-    
+    #Save uploaded file
     try:
         dataiku.Folder(archive_folder).upload_stream(dss_filename, f)
         status = "ok"
@@ -61,7 +62,21 @@ def upload_to_dss():
         print("fail")
         status = str(e)
 
-    return json.dumps({"status":status, "day":day, "hour":hour, "user":user, "initial_filename":f.filename, "dss_filename":dss_filename})
+    #Write metadata
+    submission = {"status":status, "day":day, "hour":hour, "user":user, "initial_filename":f.filename, "dss_filename":dss_filename}
+    submission["file_type2"] = selected_file 
+    submission["comment2"] = comment
+
+    try:
+        dataiku.Folder(tracking_folder).upload_stream("%s_%s_%s.json"%(submission["day"], submission["hour"], submission["user"]), json.dumps(submission))
+        status = "ok"
+
+    except Exception as e:
+        print("Submission failed")
+        status = str(e)
+    
+        
+    return json.dumps(submission)
 
 
 @app.route('/prepare_submission_without_update')
@@ -85,12 +100,5 @@ def submit():
     
     results = {}
         
-    try:
-        dataiku.Folder(tracking_folder).upload_stream("%s_%s_%s.json"%(submission["day"], submission["hour"], submission["user"]), json.dumps(submission))
-        status = "ok"
-
-    except Exception as e:
-        print("Submission failed")
-        status = str(e)
 
     return json.dumps({"status":status})
