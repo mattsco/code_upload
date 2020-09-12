@@ -20,11 +20,12 @@ $.ajax({
 
     countries = data.standard["countries"]
     window["global_countries"] = JSON.parse(countries)
-    
+    debugger;
     webapp_params = {
         archive_folder:data.standard["archive_folder"],
         tracking_folder:data.standard["tracking_folder"],
         countries:data.standard["countries"],
+        file_list:data.standard["file_list"],
         default_file_extension:data.standard["default_file_extension"]
     }
     console.log(webapp_params)
