@@ -34,38 +34,13 @@
       "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
-      "type": "ArrayFold",
-      "params": {
-        "column": "countries"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnsConcat",
-      "params": {
-        "outputColumn": "submission_date",
-        "columns": [
-          "day",
-          "hour"
-        ],
-        "join": "-"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
       "type": "DateParser",
       "params": {
         "formats": [
-          "yyyyMMdd-HHmmSS"
+          "yyyy-MM-dd-HH-mm-SS"
         ],
         "columns": [
-          "submission_date"
+          "date"
         ],
         "timezone_id": "UTC",
         "appliesTo": "SINGLE_COLUMN",
@@ -107,14 +82,14 @@
       "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
-      "type": "ColumnsSelector",
+      "type": "DateDifference",
       "params": {
-        "columns": [
-          "day",
-          "hour"
-        ],
-        "keep": false,
-        "appliesTo": "COLUMNS"
+        "output": "diff_date",
+        "input2": "last_compute_date",
+        "outputUnit": "DAYS",
+        "input1": "date",
+        "compareTo": "COLUMN",
+        "reverse": false
       },
       "alwaysShowComment": false
     },
@@ -124,55 +99,8 @@
       "disabled": false,
       "type": "CreateColumnWithGREL",
       "params": {
-        "expression": "if(submission_date\u003clast_compute_date, \"yes\", \"no\")",
+        "expression": "if(diff_date\u003e0, \"yes\", \"no\")",
         "column": "outdated"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnReorder",
-      "params": {
-        "columns": [
-          "countries"
-        ],
-        "reorderAction": "AT_START",
-        "appliesTo": "SINGLE_COLUMN"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnReorder",
-      "params": {
-        "referenceColumn": "dss_filename",
-        "columns": [
-          "submission_date",
-          "user",
-          "outdated",
-          "update"
-        ],
-        "reorderAction": "BEFORE_COLUMN",
-        "appliesTo": "COLUMNS"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnRenamer",
-      "params": {
-        "renamings": [
-          {
-            "from": "countries",
-            "to": "country"
-          }
-        ]
       },
       "alwaysShowComment": false
     }
@@ -186,7 +114,9 @@
   "analysisColumnData": {},
   "columnWidthsByName": {
     "customer_type": 113,
+    "date": 100,
     "country": 100,
+    "diff_date": 113,
     "comments": 100,
     "newcolumn_expression": 165,
     "update": 100,
@@ -198,10 +128,13 @@
     "submission_date": 155,
     "hour": 100,
     "outdated": 100,
+    "file_type": 113,
     "last_submission_date_parsed": 239,
     "dss_filename": 190,
+    "comment": 100,
     "user": 100,
-    "day": 100
+    "day": 100,
+    "status": 100
   },
   "sorting": [],
   "globalSearchQuery": "",
