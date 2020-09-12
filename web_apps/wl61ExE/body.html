@@ -12,22 +12,6 @@
 </section>
 
 
-<section id="update-section">
-    <h2>Do you have any updates to perform?</h2>
-    <form id="form-isupdate" novalidate>
-        <div class="field">
-            <div class="radio">
-                <input type="radio" name="is-update" value="true" id="update-yes" checked="checked" />
-                <label for="update-yes">Upload a file for updates</label>
-            </div>
-            <div class="radio">
-                    <input type="radio" name="is-update" value="false" id="update-no" />
-                <label for="update-no">No updates for this periode</label>
-            </div>
-        </div>
-    </form>
-</section>
-
 
 <section id="upload-section">
     <h2>Upload your file</h2>
@@ -41,15 +25,7 @@
                         <select id="country-select" name="dataset-column"></select>
                     </div>
                     
-                    <label for="dataset-to-fetch">Select the type of customers (listed/unlisted)</label>
-                    <div class="select">
-                        <select id="listed-select">
-                            <option value='' selected disabled hidden>Choose an option</option>
-                            <option value="listed">Listed</option>
-                            <option value="unlisted">Unlisted</option>
-                        </select>
-                    </div>
-                    
+                    <br></br>
                     <label for="dataset-to-fetch">Select a file from your computer</label>
                     <input class="form-control" id="new-file" type="file" />
                     <button type="button" class="main-blue-button" id="upload-button">UPLOAD</button>

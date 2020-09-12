@@ -60,7 +60,7 @@ $('.country-list').on('change', function() {
     $('.country-list').not(this).prop('checked', false);  
 });
 
-let updateSection = document.getElementById('update-section');
+
 let countrySection = document.getElementById('countries-section');
 let uploadSection = document.getElementById('upload-section');
 let uploadResults = document.getElementById('message');
@@ -96,22 +96,15 @@ $('#upload-button').click(function() {
         submitSection.style.display = "none"
         return
     }
-    if (document.getElementById('listed-select').value == ""){
-        uploadResults.innerHTML = "You must select the type of customer (listed/unlisted)"
-        uploadResults.style.color = "red"
-        submitSection.style.display = "none"
-        return
-    }
+
     
     selected_country = document.getElementById('country-select').value
-    customer_type = document.getElementById('listed-select').value
-    
+
     let newFile = $('#new-file')[0].files[0];
     let form = new FormData();
     form.append('file', newFile);
     form.append('country', selected_country);
-    form.append('customer_type', customer_type);
-    
+
     $.ajax({
         type: 'post',
         url: getWebAppBackendUrl('/upload-to-dss'),
@@ -126,9 +119,8 @@ $('#upload-button').click(function() {
                 uploadResults.style.color = "green"
                 submitSection.style.display = "block"
                                 
-                results["update"] = "yes"
                 results["countries"] = [selected_country]
-                results["customer_type"] = customer_type
+
                 
                 submit_dict = {}
                 submit_txt = ''
@@ -173,7 +165,6 @@ $('#validate-button').click(function() {
     $.getJSON(getWebAppBackendUrl('/prepare_submission_without_update'),
                 function(data) {
         data["countries"] = select_countries
-        data["update"] = "no"
         
         submit_txt = ''
         for (data_key in data) {
@@ -201,7 +192,6 @@ $('#submit-button').click(function() {
         commentsInput.style.display = "none"
         commentsTitle.style.display = "none"
         submitButton.style.display = "none"
-        updateSection.style.display = "none"
         submitResults.style.display = "block"
         submitParams.innerHTML = submitParams.innerHTML + "comments : " + commentsInput.value
         
