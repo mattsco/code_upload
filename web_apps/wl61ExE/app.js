@@ -93,7 +93,6 @@ $('#upload-button').click(function() {
     if (document.getElementById('country-select').value == ""){
         uploadResults.innerHTML = "You must select a type file first"
         uploadResults.style.color = "red"
-        submitSection.style.display = "none"
         return
     }
 
@@ -118,7 +117,6 @@ $('#upload-button').click(function() {
             if (results["status"] == "ok"){
                 uploadResults.innerHTML = "Upload successful <br>"
                 uploadResults.style.color = "green"
-                submitSection.style.display = "block"
                                 
                 results["file_type"] = [selected_file]
                 results["comment"] = [comment]
@@ -137,7 +135,6 @@ $('#upload-button').click(function() {
             else {
                 uploadResults.innerHTML = "Upload failed - " + results["status"]
                 uploadResults.style.color = "red"
-                submitSection.style.display = "none"
             }
         },
         error: function (jqXHR, status, errorThrown) {
@@ -145,7 +142,6 @@ $('#upload-button').click(function() {
             console.error(jqXHR.responseText);
             uploadResults.innerHTML = "Upload failed - " + jqXHR.responseText
             uploadResults.style.color = "red"
-            submitSection.style.dispaly = "none"
         }
     });
     
