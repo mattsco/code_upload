@@ -1,14 +1,4 @@
-/*Load project variable params
-Example 
-{
-    "last_compute_date":"2020/07/27-21:32:00",
-    "countries": "[\"India\",\"Thailand\",\"UK\"]",
-    "archive_folder":"vOv1eTkv",
-    "tracking_folder":"3zAYHyFW",
-    "default_file_extension":".pdf"
-}
-*/
-global_countries = []
+
 
 $.ajax({
     method: "GET",
@@ -32,14 +22,14 @@ $.ajax({
         f_html = f_html + html
         f_html_upload = f_html_upload + html_upload
     })
-    document.getElementById('countries-div').innerHTML = f_html
-    document.getElementById('country-select').innerHTML = f_html_upload
+    //document.getElementById('file-div').innerHTML = f_html
+    document.getElementById('file-select').innerHTML = f_html_upload
 });        
         
 
 //Ensure only one country can be selected when uploading a file
-$('.country-list').on('change', function() {
-    $('.country-list').not(this).prop('checked', false);  
+$('.file-list').on('change', function() {
+    $('.file-list').not(this).prop('checked', false);  
 });
 
 
