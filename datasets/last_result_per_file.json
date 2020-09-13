@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1599957384705
+    "lastModifiedOn": 1599957386629
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,7 +85,40 @@
     }
   },
   "schema": {
-    "columns": [],
+    "columns": [
+      {
+        "name": "outdated",
+        "type": "boolean"
+      },
+      {
+        "name": "user",
+        "type": "string"
+      },
+      {
+        "name": "initial_filename",
+        "type": "string"
+      },
+      {
+        "name": "dss_filename",
+        "type": "string"
+      },
+      {
+        "name": "file_type",
+        "type": "string"
+      },
+      {
+        "name": "comment",
+        "type": "string"
+      },
+      {
+        "name": "last_compute_date",
+        "type": "date"
+      },
+      {
+        "name": "rank",
+        "type": "bigint"
+      }
+    ],
     "userModified": true
   },
   "metrics": {
