@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600000490750
+    "lastModifiedOn": 1600001184455
   },
   "creationTag": {
     "versionNumber": 0,
@@ -99,11 +99,11 @@
         "type": "string"
       },
       {
-        "name": "dss_filename",
+        "name": "comment",
         "type": "string"
       },
       {
-        "name": "comment",
+        "name": "initial_filename",
         "type": "string"
       }
     ],
