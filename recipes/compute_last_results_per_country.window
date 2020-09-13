@@ -177,8 +177,9 @@
       "min": false,
       "avg": false,
       "lag": false,
+      "$selected": false,
       "stddev": false,
-      "value": false,
+      "value": true,
       "leadDiff": false,
       "first": false
     },
@@ -196,8 +197,9 @@
       "min": false,
       "avg": false,
       "lag": false,
+      "$selected": false,
       "stddev": false,
-      "value": false,
+      "value": true,
       "leadDiff": false,
       "first": false
     },
@@ -280,6 +282,14 @@
           },
           {
             "name": "dss_filename",
+            "type": "string"
+          },
+          {
+            "name": "file_type",
+            "type": "string"
+          },
+          {
+            "name": "comment",
             "type": "string"
           },
           {
