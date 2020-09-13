@@ -18,7 +18,7 @@ output_folder.clear()
 
 for i, row in df.iterrows():
 
-    if row["update"] == "yes" and row["outdated"] == "no":
+    if  row["outdated"] == "no":
         country = row["country"]
         customer_type = row["customer_type"]
         file_name = row["dss_filename"]
