@@ -35,4 +35,4 @@ for i, row in df.iterrows():
         file_name = row["dss_filename"]
         file_stream = archived_folder.get_download_stream(file_name)
         output_folder.upload_stream(file_name, file_stream)
-        print("File %s uploaded for %s %s"%(file_name, file_type))
+        print("File %s uploaded for %s"%(file_name, file_type))
