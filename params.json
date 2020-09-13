@@ -42,6 +42,15 @@
           "objectType": "MANAGED_FOLDER"
         },
         "modes": []
+      },
+      {
+        "objectRef": {
+          "objectId": "required_files_check",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
       }
     ]
   },
@@ -230,11 +239,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 18,
+    "versionNumber": 19,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1599896705362
+    "lastModifiedOn": 1600009343955
   },
   "creationTag": {
     "versionNumber": 0,
