@@ -11,10 +11,6 @@ f1 = eval(var["mandatory"])
 
 df = pd.DataFrame(zip(f0,f1), columns=["file_list","mandatory"])
 
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-df
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
 required_files = dataiku.Dataset("required_files")
 required_files.write_with_schema(df)
