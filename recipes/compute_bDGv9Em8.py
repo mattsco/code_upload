@@ -4,6 +4,16 @@ import dataiku
 import pandas as pd, numpy as np
 from dataiku import pandasutils as pdu
 
+df = dataiku.Dataset("required_files_check").get_dataframe()
+
+try:
+    nok = df[df["pass"]=="NOK"]
+    assert len(nok)==0
+except:
+    m = ",".join(list(nok.file_list.values))
+    raise Exception("Mandatory file missing: %s".format(m))
+
+
 archive_folder_id = dataiku.get_custom_variables()["archive_folder"]
 
 #modify the output folder id
