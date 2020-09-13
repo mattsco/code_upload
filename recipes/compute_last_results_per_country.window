@@ -10,7 +10,7 @@
       "last": false,
       "lagDiff": false,
       "max": false,
-      "column": "status",
+      "column": "file_type",
       "count": false,
       "$idx": 0,
       "sum": false,
@@ -20,8 +20,9 @@
       "min": false,
       "avg": false,
       "lag": false,
+      "$selected": false,
       "stddev": false,
-      "value": false,
+      "value": true,
       "leadDiff": false,
       "first": false
     },
@@ -39,27 +40,9 @@
       "min": false,
       "avg": false,
       "lag": false,
+      "$selected": false,
       "stddev": false,
-      "value": false,
-      "leadDiff": false,
-      "first": false
-    },
-    {
-      "last": false,
-      "lagDiff": false,
-      "max": false,
-      "column": "diff_date",
-      "count": false,
-      "$idx": 2,
-      "sum": false,
-      "concat": false,
-      "type": "bigint",
-      "lead": false,
-      "min": false,
-      "avg": false,
-      "lag": false,
-      "stddev": false,
-      "value": false,
+      "value": true,
       "leadDiff": false,
       "first": false
     },
@@ -70,7 +53,7 @@
       "firstLastNotNull": false,
       "column": "outdated",
       "count": false,
-      "$idx": 3,
+      "$idx": 2,
       "lagValues": "1",
       "sum": false,
       "concat": false,
@@ -83,6 +66,26 @@
       "avg": false,
       "lag": false,
       "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "column": "mandatory",
+      "count": false,
+      "$idx": 3,
+      "sum": false,
+      "concat": false,
+      "type": "bigint",
+      "lead": false,
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "$selected": false,
       "stddev": false,
       "value": true,
       "leadDiff": false,
@@ -118,7 +121,7 @@
       "lagDiff": false,
       "max": false,
       "firstLastNotNull": false,
-      "column": "initial_filename",
+      "column": "dss_filename",
       "count": false,
       "$idx": 5,
       "lagValues": "1",
@@ -142,10 +145,30 @@
       "last": false,
       "lagDiff": false,
       "max": false,
-      "firstLastNotNull": false,
-      "column": "dss_filename",
+      "column": "comment",
       "count": false,
       "$idx": 6,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "lead": false,
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "$selected": false,
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "initial_filename",
+      "count": false,
+      "$idx": 7,
       "lagValues": "1",
       "sum": false,
       "concat": false,
@@ -167,32 +190,12 @@
       "last": false,
       "lagDiff": false,
       "max": false,
-      "column": "file_type",
-      "count": false,
-      "$idx": 7,
-      "sum": false,
-      "concat": false,
-      "type": "string",
-      "lead": false,
-      "min": false,
-      "avg": false,
-      "lag": false,
-      "$selected": false,
-      "stddev": false,
-      "value": true,
-      "leadDiff": false,
-      "first": false
-    },
-    {
-      "last": false,
-      "lagDiff": false,
-      "max": false,
-      "column": "comment",
+      "column": "diff_date",
       "count": false,
       "$idx": 8,
       "sum": false,
       "concat": false,
-      "type": "string",
+      "type": "bigint",
       "lead": false,
       "min": false,
       "avg": false,
@@ -207,22 +210,37 @@
       "last": false,
       "lagDiff": false,
       "max": false,
-      "firstLastNotNull": false,
-      "column": "last_compute_date",
+      "column": "only_after",
       "count": false,
       "$idx": 9,
-      "lagValues": "1",
       "sum": false,
       "concat": false,
       "type": "date",
       "lead": false,
-      "concatDistinct": false,
-      "dateDiffUnit": "DAY",
       "min": false,
-      "countDistinct": false,
       "avg": false,
       "lag": false,
-      "leadValues": "1",
+      "$selected": false,
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "column": "status",
+      "count": false,
+      "$idx": 10,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "lead": false,
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "$selected": false,
       "stddev": false,
       "value": true,
       "leadDiff": false,
@@ -269,15 +287,23 @@
       "schema": {
         "columns": [
           {
+            "name": "file_type",
+            "type": "string"
+          },
+          {
+            "name": "date",
+            "type": "date"
+          },
+          {
             "name": "outdated",
             "type": "boolean"
           },
           {
-            "name": "user",
-            "type": "string"
+            "name": "mandatory",
+            "type": "bigint"
           },
           {
-            "name": "initial_filename",
+            "name": "user",
             "type": "string"
           },
           {
@@ -285,19 +311,27 @@
             "type": "string"
           },
           {
-            "name": "file_type",
-            "type": "string"
-          },
-          {
             "name": "comment",
             "type": "string"
           },
           {
-            "name": "last_compute_date",
+            "name": "initial_filename",
+            "type": "string"
+          },
+          {
+            "name": "diff_date",
+            "type": "bigint"
+          },
+          {
+            "name": "only_after",
             "type": "date"
           },
           {
-            "name": "rank",
+            "name": "status",
+            "type": "string"
+          },
+          {
+            "name": "rownumber",
             "type": "bigint"
           }
         ],
@@ -347,8 +381,8 @@
     }
   },
   "ntile": false,
-  "rank": true,
+  "rank": false,
   "denseRank": false,
-  "rowNumber": false,
+  "rowNumber": true,
   "outputColumnNameOverrides": {}
 }
