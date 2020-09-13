@@ -20,14 +20,6 @@
     "main": {
       "items": [
         {
-          "ref": "vOv1eTkv",
-          "deps": []
-        },
-        {
-          "ref": "3zAYHyFW",
-          "deps": []
-        },
-        {
           "ref": "bDGv9Em8",
           "deps": []
         }
@@ -45,11 +37,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600012602181
+    "lastModifiedOn": 1600012606093
   },
   "creationTag": {
     "versionNumber": 0,
