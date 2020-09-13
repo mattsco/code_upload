@@ -38,12 +38,12 @@
       "table": 1
     },
     {
-      "name": "dss_filename",
+      "name": "comment",
       "type": "string",
       "table": 1
     },
     {
-      "name": "comment",
+      "name": "initial_filename",
       "type": "string",
       "table": 1
     }
@@ -120,11 +120,11 @@
             "type": "string"
           },
           {
-            "name": "dss_filename",
+            "name": "comment",
             "type": "string"
           },
           {
-            "name": "comment",
+            "name": "initial_filename",
             "type": "string"
           }
         ],
