@@ -10,7 +10,7 @@
       "last": false,
       "lagDiff": false,
       "max": false,
-      "column": "country",
+      "column": "status",
       "count": false,
       "$idx": 0,
       "sum": false,
@@ -20,9 +20,8 @@
       "min": false,
       "avg": false,
       "lag": false,
-      "$selected": false,
       "stddev": false,
-      "value": true,
+      "value": false,
       "leadDiff": false,
       "first": false
     },
@@ -30,39 +29,52 @@
       "last": false,
       "lagDiff": false,
       "max": false,
-      "firstLastNotNull": false,
-      "column": "initial_filename",
+      "column": "date",
       "count": false,
       "$idx": 1,
-      "lagValues": "1",
-      "sum": false,
-      "concat": false,
-      "type": "string",
-      "lead": false,
-      "concatDistinct": false,
-      "dateDiffUnit": "DAY",
-      "min": false,
-      "countDistinct": false,
-      "avg": false,
-      "lag": false,
-      "leadValues": "1",
-      "stddev": false,
-      "value": true,
-      "leadDiff": false,
-      "first": false
-    },
-    {
-      "last": false,
-      "lagDiff": false,
-      "max": false,
-      "firstLastNotNull": false,
-      "column": "submission_date",
-      "count": false,
-      "$idx": 2,
-      "lagValues": "1",
       "sum": false,
       "concat": false,
       "type": "date",
+      "lead": false,
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "stddev": false,
+      "value": false,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "column": "diff_date",
+      "count": false,
+      "$idx": 2,
+      "sum": false,
+      "concat": false,
+      "type": "bigint",
+      "lead": false,
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "stddev": false,
+      "value": false,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "outdated",
+      "count": false,
+      "$idx": 3,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "boolean",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -83,7 +95,7 @@
       "firstLastNotNull": false,
       "column": "user",
       "count": false,
-      "$idx": 3,
+      "$idx": 4,
       "lagValues": "1",
       "sum": false,
       "concat": false,
@@ -106,38 +118,13 @@
       "lagDiff": false,
       "max": false,
       "firstLastNotNull": false,
-      "column": "outdated",
-      "count": false,
-      "$idx": 4,
-      "lagValues": "1",
-      "sum": false,
-      "concat": false,
-      "type": "boolean",
-      "lead": false,
-      "concatDistinct": false,
-      "dateDiffUnit": "DAY",
-      "min": false,
-      "countDistinct": false,
-      "avg": false,
-      "lag": false,
-      "leadValues": "1",
-      "stddev": false,
-      "value": true,
-      "leadDiff": false,
-      "first": false
-    },
-    {
-      "last": false,
-      "lagDiff": false,
-      "max": false,
-      "firstLastNotNull": false,
-      "column": "update",
+      "column": "initial_filename",
       "count": false,
       "$idx": 5,
       "lagValues": "1",
       "sum": false,
       "concat": false,
-      "type": "boolean",
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -180,7 +167,7 @@
       "last": false,
       "lagDiff": false,
       "max": false,
-      "column": "customer_type",
+      "column": "file_type",
       "count": false,
       "$idx": 7,
       "sum": false,
@@ -190,9 +177,8 @@
       "min": false,
       "avg": false,
       "lag": false,
-      "$selected": false,
       "stddev": false,
-      "value": true,
+      "value": false,
       "leadDiff": false,
       "first": false
     },
@@ -200,24 +186,18 @@
       "last": false,
       "lagDiff": false,
       "max": false,
-      "firstLastNotNull": false,
-      "column": "comments",
+      "column": "comment",
       "count": false,
       "$idx": 8,
-      "lagValues": "1",
       "sum": false,
       "concat": false,
       "type": "string",
       "lead": false,
-      "concatDistinct": false,
-      "dateDiffUnit": "DAY",
       "min": false,
-      "countDistinct": false,
       "avg": false,
       "lag": false,
-      "leadValues": "1",
       "stddev": false,
-      "value": true,
+      "value": false,
       "leadDiff": false,
       "first": false
     },
@@ -257,8 +237,8 @@
       "limitFollowing": false,
       "orders": [
         {
-          "column": "submission_date",
-          "desc": true
+          "column": "date",
+          "desc": false
         }
       ],
       "limitPreceding": false,
@@ -266,8 +246,7 @@
       "windowLowerBound": 0,
       "enableLimits": false,
       "partitioningColumns": [
-        "country",
-        "customer_type"
+        "file_type"
       ]
     }
   ],
@@ -278,7 +257,7 @@
       "conditions": [
         {
           "input": "rank",
-          "col": "submission_date",
+          "col": "outdated",
           "num": 1,
           "operator": "\u003d\u003d [number]"
         }
@@ -288,7 +267,11 @@
       "schema": {
         "columns": [
           {
-            "name": "country",
+            "name": "outdated",
+            "type": "boolean"
+          },
+          {
+            "name": "user",
             "type": "string"
           },
           {
@@ -296,31 +279,7 @@
             "type": "string"
           },
           {
-            "name": "submission_date",
-            "type": "date"
-          },
-          {
-            "name": "user",
-            "type": "string"
-          },
-          {
-            "name": "outdated",
-            "type": "boolean"
-          },
-          {
-            "name": "update",
-            "type": "boolean"
-          },
-          {
             "name": "dss_filename",
-            "type": "string"
-          },
-          {
-            "name": "customer_type",
-            "type": "string"
-          },
-          {
-            "name": "comments",
             "type": "string"
           },
           {
