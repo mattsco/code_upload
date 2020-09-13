@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1596697095969
+    "lastModifiedOn": 1599955241187
   },
   "creationTag": {
     "versionNumber": 0,
@@ -87,7 +87,11 @@
   "schema": {
     "columns": [
       {
-        "name": "country",
+        "name": "outdated",
+        "type": "boolean"
+      },
+      {
+        "name": "user",
         "type": "string"
       },
       {
@@ -95,31 +99,7 @@
         "type": "string"
       },
       {
-        "name": "submission_date",
-        "type": "date"
-      },
-      {
-        "name": "user",
-        "type": "string"
-      },
-      {
-        "name": "outdated",
-        "type": "boolean"
-      },
-      {
-        "name": "update",
-        "type": "boolean"
-      },
-      {
         "name": "dss_filename",
-        "type": "string"
-      },
-      {
-        "name": "customer_type",
-        "type": "string"
-      },
-      {
-        "name": "comments",
         "type": "string"
       },
       {
