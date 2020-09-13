@@ -276,7 +276,7 @@
       "mode": "\u0026\u0026",
       "conditions": [
         {
-          "input": "rank",
+          "input": "rownumber",
           "col": "outdated",
           "num": 1,
           "operator": "\u003d\u003d [number]"
