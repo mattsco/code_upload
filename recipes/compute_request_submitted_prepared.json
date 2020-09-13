@@ -56,6 +56,14 @@
           "deps": []
         }
       ]
+    },
+    "scriptDeps": {
+      "items": [
+        {
+          "ref": "required_files",
+          "deps": []
+        }
+      ]
     }
   },
   "outputs": {
@@ -69,11 +77,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 14,
+    "versionNumber": 15,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1599999627194
+    "lastModifiedOn": 1599999781474
   },
   "creationTag": {
     "versionNumber": 0,

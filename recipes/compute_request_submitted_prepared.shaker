@@ -123,6 +123,129 @@
         "appliesTo": "SINGLE_COLUMN"
       },
       "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "MemoryEquiJoiner",
+      "params": {
+        "rightCol": "file_list",
+        "forceRawLevenshteinEngine": false,
+        "copyPrefix": "",
+        "sortAlphabetically": false,
+        "language": "english",
+        "leftCol": "file_type",
+        "copyColumns": [
+          "mandatory"
+        ],
+        "normalize": false,
+        "maxLevenshtein": 1,
+        "clearStopWords": false,
+        "fuzzy": false,
+        "rightInput": "required_files",
+        "stem": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "name": "Reorder",
+      "metaType": "GROUP",
+      "disabled": false,
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnReorder",
+          "params": {
+            "referenceColumn": "user",
+            "columns": [
+              "mandatory"
+            ],
+            "reorderAction": "BEFORE_COLUMN",
+            "appliesTo": "SINGLE_COLUMN"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnReorder",
+          "params": {
+            "referenceColumn": "initial_filename",
+            "columns": [
+              "diff_date"
+            ],
+            "reorderAction": "AFTER_COLUMN",
+            "appliesTo": "SINGLE_COLUMN"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnReorder",
+          "params": {
+            "referenceColumn": "initial_filename",
+            "columns": [
+              "file_type",
+              "comment",
+              "dss_filename"
+            ],
+            "reorderAction": "BEFORE_COLUMN",
+            "appliesTo": "COLUMNS"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnReorder",
+          "params": {
+            "columns": [
+              "file_type"
+            ],
+            "reorderAction": "AT_START",
+            "appliesTo": "SINGLE_COLUMN"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnReorder",
+          "params": {
+            "columns": [
+              "status"
+            ],
+            "reorderAction": "AT_END",
+            "appliesTo": "SINGLE_COLUMN"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnReorder",
+          "params": {
+            "referenceColumn": "dss_filename",
+            "columns": [
+              "comment"
+            ],
+            "reorderAction": "AFTER_COLUMN",
+            "appliesTo": "SINGLE_COLUMN"
+          },
+          "alwaysShowComment": false
+        }
+      ],
+      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
@@ -136,12 +259,8 @@
     "customer_type": 113,
     "date": 100,
     "country": 100,
-    "diff_date": 113,
-    "comments": 100,
-    "newcolumn_expression": 165,
     "update": 100,
-    "countries": 113,
-    "initial_filename": 253,
+    "mandatory": 113,
     "newcolumn_expression_parsed": 239,
     "last_submission_date": 190,
     "last_compute_date": 143,
@@ -150,10 +269,16 @@
     "outdated": 100,
     "file_type": 113,
     "last_submission_date_parsed": 239,
+    "join_mandatory": 148,
     "dss_filename": 190,
+    "day": 100,
+    "diff_date": 113,
+    "comments": 100,
+    "newcolumn_expression": 165,
+    "countries": 113,
+    "initial_filename": 253,
     "comment": 100,
     "user": 100,
-    "day": 100,
     "only_after": 120,
     "status": 100
   },
