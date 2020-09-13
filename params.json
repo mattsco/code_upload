@@ -51,6 +51,15 @@
         "modes": [
           "READ"
         ]
+      },
+      {
+        "objectRef": {
+          "objectId": "UPDATE_FOLDERS",
+          "objectType": "SCENARIO"
+        },
+        "modes": [
+          "RUN"
+        ]
       }
     ]
   },
@@ -239,11 +248,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 21,
+    "versionNumber": 22,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600012389602
+    "lastModifiedOn": 1600012769371
   },
   "creationTag": {
     "versionNumber": 0,
