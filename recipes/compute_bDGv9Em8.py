@@ -4,6 +4,8 @@ import dataiku
 import pandas as pd, numpy as np
 from dataiku import pandasutils as pdu
 
+
+#Step 1 : check no mandatory files are missing.
 df = dataiku.Dataset("required_files_check").get_dataframe()
 
 try:
@@ -29,9 +31,8 @@ output_folder.clear()
 for i, row in df.iterrows():
 
     if  row["outdated"] == "no":
-        country = row["country"]
-        customer_type = row["customer_type"]
+        file_type = row["file_type"]
         file_name = row["dss_filename"]
         file_stream = archived_folder.get_download_stream(file_name)
         output_folder.upload_stream(file_name, file_stream)
-        print("File %s uploaded for %s %s"%(file_name, country, customer_type))
+        print("File %s uploaded for %s %s"%(file_name, file_type))
