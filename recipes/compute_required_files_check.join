@@ -109,6 +109,12 @@
       "name": "available",
       "expr": "if(strval(\"status\")\u003d\u003d\u0027ok\u0027, 1, 0)",
       "type": "double"
+    },
+    {
+      "mode": "GREL",
+      "name": "pass",
+      "expr": "if(strval(\"status\")!\u003d\u0027ok\u0027 \u0026\u0026 mandatory\u003d\u003d1, \u0027NOK\u0027, \u0027OK\u0027)",
+      "type": "double"
     }
   ],
   "postFilter": {
@@ -137,6 +143,10 @@
           },
           {
             "name": "available",
+            "type": "double"
+          },
+          {
+            "name": "pass",
             "type": "double"
           }
         ],
