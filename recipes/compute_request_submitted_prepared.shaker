@@ -54,8 +54,8 @@
       "disabled": false,
       "type": "CreateColumnWithGREL",
       "params": {
-        "expression": "\"${last_compute_date}\"",
-        "column": "last_compute_date"
+        "expression": "\"${only_after}\"",
+        "column": "only_after"
       },
       "alwaysShowComment": false
     },
@@ -67,10 +67,10 @@
       "params": {
         "outCol": "",
         "formats": [
-          "yyyy/MM/dd-HH:mm:ss"
+          "yyyy/MM/dd"
         ],
         "columns": [
-          "last_compute_date"
+          "only_after"
         ],
         "timezone_id": "UTC",
         "appliesTo": "SINGLE_COLUMN",
@@ -85,7 +85,7 @@
       "type": "DateDifference",
       "params": {
         "output": "diff_date",
-        "input2": "last_compute_date",
+        "input2": "only_after",
         "outputUnit": "DAYS",
         "input1": "date",
         "compareTo": "COLUMN",
@@ -99,7 +99,7 @@
       "disabled": false,
       "type": "CreateColumnWithGREL",
       "params": {
-        "expression": "if(diff_date\u003e0, \"yes\", \"no\")",
+        "expression": "if(diff_date\u003e\u003d0, \"yes\", \"no\")",
         "column": "outdated"
       },
       "alwaysShowComment": false
@@ -134,6 +134,7 @@
     "comment": 100,
     "user": 100,
     "day": 100,
+    "only_after": 120,
     "status": 100
   },
   "sorting": [],
