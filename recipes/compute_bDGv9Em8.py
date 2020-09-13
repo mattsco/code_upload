@@ -11,7 +11,7 @@ output_folder = dataiku.Folder("bDGv9Em8")
 archived_folder = dataiku.Folder(archive_folder_id)
 
 
-df = dataiku.Dataset("last_results_per_country").get_dataframe()
+df = dataiku.Dataset("last_results_per_file").get_dataframe()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 output_folder.clear()
