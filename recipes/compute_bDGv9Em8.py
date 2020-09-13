@@ -11,7 +11,7 @@ try:
     assert len(nok)==0
 except:
     m = ",".join(list(nok.file_list.values))
-    raise Exception("Mandatory file missing: %s".format(m))
+    raise Exception("Mandatory file missing: %s"%(m))
 
 
 archive_folder_id = dataiku.get_custom_variables()["archive_folder"]
