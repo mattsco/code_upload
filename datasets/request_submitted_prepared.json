@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 7,
+    "versionNumber": 8,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1599999592019
+    "lastModifiedOn": 1599999781392
   },
   "creationTag": {
     "versionNumber": 0,
@@ -87,7 +87,7 @@
   "schema": {
     "columns": [
       {
-        "name": "status",
+        "name": "file_type",
         "type": "string"
       },
       {
@@ -95,19 +95,15 @@
         "type": "date"
       },
       {
-        "name": "diff_date",
-        "type": "bigint"
-      },
-      {
         "name": "outdated",
         "type": "boolean"
       },
       {
-        "name": "user",
-        "type": "string"
+        "name": "mandatory",
+        "type": "bigint"
       },
       {
-        "name": "initial_filename",
+        "name": "user",
         "type": "string"
       },
       {
@@ -115,16 +111,24 @@
         "type": "string"
       },
       {
-        "name": "file_type",
-        "type": "string"
-      },
-      {
         "name": "comment",
         "type": "string"
       },
       {
+        "name": "initial_filename",
+        "type": "string"
+      },
+      {
+        "name": "diff_date",
+        "type": "bigint"
+      },
+      {
         "name": "only_after",
         "type": "date"
+      },
+      {
+        "name": "status",
+        "type": "string"
       }
     ],
     "userModified": true
