@@ -6,60 +6,85 @@
       "conditionsMode": "AND",
       "type": "LEFT",
       "outerJoinOnTheLeft": true,
-      "on": []
+      "on": [
+        {
+          "column1": {
+            "name": "file_list",
+            "table": 0
+          },
+          "column2": {
+            "name": "file_type",
+            "table": 1
+          },
+          "type": "EQ"
+        }
+      ]
     }
   ],
   "selectedColumns": [
     {
       "name": "file_list",
+      "type": "string",
       "table": 0
     },
     {
       "name": "mandatory",
+      "type": "string",
       "table": 0
     },
     {
       "name": "file_type",
+      "type": "string",
       "table": 1
     },
     {
       "name": "date",
+      "type": "date",
       "table": 1
     },
     {
       "name": "outdated",
+      "type": "boolean",
       "table": 1
     },
     {
       "name": "user",
+      "type": "string",
       "table": 1
     },
     {
       "name": "dss_filename",
+      "type": "string",
       "table": 1
     },
     {
       "name": "comment",
+      "type": "string",
       "table": 1
     },
     {
       "name": "initial_filename",
+      "type": "string",
       "table": 1
     },
     {
       "name": "diff_date",
+      "type": "bigint",
       "table": 1
     },
     {
       "name": "only_after",
+      "type": "date",
       "table": 1
     },
     {
       "name": "status",
+      "type": "string",
       "table": 1
     },
     {
       "name": "rownumber",
+      "type": "bigint",
       "table": 1
     }
   ],
@@ -117,5 +142,67 @@
       "computedColumns": []
     }
   ],
+  "computedColumns": [],
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "file_list",
+            "type": "string"
+          },
+          {
+            "name": "mandatory",
+            "type": "string"
+          },
+          {
+            "name": "file_type",
+            "type": "string"
+          },
+          {
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "name": "outdated",
+            "type": "boolean"
+          },
+          {
+            "name": "user",
+            "type": "string"
+          },
+          {
+            "name": "dss_filename",
+            "type": "string"
+          },
+          {
+            "name": "comment",
+            "type": "string"
+          },
+          {
+            "name": "initial_filename",
+            "type": "string"
+          },
+          {
+            "name": "diff_date",
+            "type": "bigint"
+          },
+          {
+            "name": "only_after",
+            "type": "date"
+          },
+          {
+            "name": "status",
+            "type": "string"
+          },
+          {
+            "name": "rownumber",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    }
+  },
   "enableAutoCastInJoinConditions": false
 }
