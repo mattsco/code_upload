@@ -18,12 +18,7 @@
   "maxRunningActivities": 0,
   "inputs": {
     "main": {
-      "items": [
-        {
-          "ref": "bDGv9Em8",
-          "deps": []
-        }
-      ]
+      "items": []
     }
   },
   "outputs": {
@@ -37,11 +32,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600012609265
+    "lastModifiedOn": 1600012632906
   },
   "creationTag": {
     "versionNumber": 0,
