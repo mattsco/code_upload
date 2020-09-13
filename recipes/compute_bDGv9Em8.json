@@ -27,6 +27,10 @@
         {
           "ref": "required_files_check",
           "deps": []
+        },
+        {
+          "ref": "last_result_per_file",
+          "deps": []
         }
       ]
     }
@@ -42,11 +46,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 21,
+    "versionNumber": 22,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600012052979
+    "lastModifiedOn": 1600012060311
   },
   "creationTag": {
     "versionNumber": 0,
