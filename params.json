@@ -60,6 +60,15 @@
         "modes": [
           "RUN"
         ]
+      },
+      {
+        "objectRef": {
+          "objectId": "CLEAR_FOLDER",
+          "objectType": "SCENARIO"
+        },
+        "modes": [
+          "RUN"
+        ]
       }
     ]
   },
@@ -248,11 +257,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 22,
+    "versionNumber": 23,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600012769371
+    "lastModifiedOn": 1600012793398
   },
   "creationTag": {
     "versionNumber": 0,
