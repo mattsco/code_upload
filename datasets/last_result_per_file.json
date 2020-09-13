@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1599957386629
+    "lastModifiedOn": 1600000016672
   },
   "creationTag": {
     "versionNumber": 0,
@@ -87,15 +87,23 @@
   "schema": {
     "columns": [
       {
+        "name": "file_type",
+        "type": "string"
+      },
+      {
+        "name": "date",
+        "type": "date"
+      },
+      {
         "name": "outdated",
         "type": "boolean"
       },
       {
-        "name": "user",
-        "type": "string"
+        "name": "mandatory",
+        "type": "bigint"
       },
       {
-        "name": "initial_filename",
+        "name": "user",
         "type": "string"
       },
       {
@@ -103,19 +111,27 @@
         "type": "string"
       },
       {
-        "name": "file_type",
-        "type": "string"
-      },
-      {
         "name": "comment",
         "type": "string"
       },
       {
-        "name": "last_compute_date",
+        "name": "initial_filename",
+        "type": "string"
+      },
+      {
+        "name": "diff_date",
+        "type": "bigint"
+      },
+      {
+        "name": "only_after",
         "type": "date"
       },
       {
-        "name": "rank",
+        "name": "status",
+        "type": "string"
+      },
+      {
+        "name": "rownumber",
         "type": "bigint"
       }
     ],
