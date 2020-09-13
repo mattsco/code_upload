@@ -50,38 +50,6 @@
         ]
       },
       "showTitle": false
-    },
-    {
-      "id": "frU9EQm",
-      "grid": {
-        "tiles": [
-          {
-            "tileType": "INSIGHT",
-            "box": {
-              "top": 0,
-              "left": 0,
-              "width": 8,
-              "height": 4
-            },
-            "clickAction": "OPEN_INSIGHT",
-            "tileParams": {
-              "showName": true,
-              "showDescription": true,
-              "showCustomFields": true,
-              "showStorageType": false,
-              "showMeaning": false,
-              "showProgressBar": false
-            },
-            "autoLoad": true,
-            "showTitle": "YES",
-            "insightId": "REFLp0r",
-            "insightType": "dataset_table",
-            "displayMode": "INSIGHT",
-            "resizeImageMode": "FIT_SIZE"
-          }
-        ]
-      },
-      "showTitle": false
     }
   ],
   "owner": "admin",
@@ -89,11 +57,11 @@
   "name": "webapp upload\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 16,
+    "versionNumber": 17,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600012439344
+    "lastModifiedOn": 1600012444803
   },
   "creationTag": {
     "versionNumber": 0,
