@@ -38,21 +38,6 @@
       "table": 1
     },
     {
-      "name": "date",
-      "type": "date",
-      "table": 1
-    },
-    {
-      "name": "outdated",
-      "type": "boolean",
-      "table": 1
-    },
-    {
-      "name": "user",
-      "type": "string",
-      "table": 1
-    },
-    {
       "name": "dss_filename",
       "type": "string",
       "table": 1
@@ -60,31 +45,6 @@
     {
       "name": "comment",
       "type": "string",
-      "table": 1
-    },
-    {
-      "name": "initial_filename",
-      "type": "string",
-      "table": 1
-    },
-    {
-      "name": "diff_date",
-      "type": "bigint",
-      "table": 1
-    },
-    {
-      "name": "only_after",
-      "type": "date",
-      "table": 1
-    },
-    {
-      "name": "status",
-      "type": "string",
-      "table": 1
-    },
-    {
-      "name": "rownumber",
-      "type": "bigint",
       "table": 1
     }
   ],
@@ -160,44 +120,12 @@
             "type": "string"
           },
           {
-            "name": "date",
-            "type": "date"
-          },
-          {
-            "name": "outdated",
-            "type": "boolean"
-          },
-          {
-            "name": "user",
-            "type": "string"
-          },
-          {
             "name": "dss_filename",
             "type": "string"
           },
           {
             "name": "comment",
             "type": "string"
-          },
-          {
-            "name": "initial_filename",
-            "type": "string"
-          },
-          {
-            "name": "diff_date",
-            "type": "bigint"
-          },
-          {
-            "name": "only_after",
-            "type": "date"
-          },
-          {
-            "name": "status",
-            "type": "string"
-          },
-          {
-            "name": "rownumber",
-            "type": "bigint"
           }
         ],
         "userModified": false
