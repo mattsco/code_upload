@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600000397985
+    "lastModifiedOn": 1600000490750
   },
   "creationTag": {
     "versionNumber": 0,
@@ -99,44 +99,12 @@
         "type": "string"
       },
       {
-        "name": "date",
-        "type": "date"
-      },
-      {
-        "name": "outdated",
-        "type": "boolean"
-      },
-      {
-        "name": "user",
-        "type": "string"
-      },
-      {
         "name": "dss_filename",
         "type": "string"
       },
       {
         "name": "comment",
         "type": "string"
-      },
-      {
-        "name": "initial_filename",
-        "type": "string"
-      },
-      {
-        "name": "diff_date",
-        "type": "bigint"
-      },
-      {
-        "name": "only_after",
-        "type": "date"
-      },
-      {
-        "name": "status",
-        "type": "string"
-      },
-      {
-        "name": "rownumber",
-        "type": "bigint"
       }
     ],
     "userModified": true
