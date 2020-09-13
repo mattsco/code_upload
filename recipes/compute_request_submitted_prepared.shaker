@@ -126,49 +126,10 @@
     },
     {
       "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "MemoryEquiJoiner",
-      "params": {
-        "rightCol": "file_list",
-        "forceRawLevenshteinEngine": false,
-        "copyPrefix": "",
-        "sortAlphabetically": false,
-        "language": "english",
-        "leftCol": "file_type",
-        "copyColumns": [
-          "mandatory"
-        ],
-        "normalize": false,
-        "maxLevenshtein": 1,
-        "clearStopWords": false,
-        "fuzzy": false,
-        "rightInput": "required_files",
-        "stem": false
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
       "name": "Reorder",
       "metaType": "GROUP",
       "disabled": false,
       "steps": [
-        {
-          "preview": false,
-          "metaType": "PROCESSOR",
-          "disabled": false,
-          "type": "ColumnReorder",
-          "params": {
-            "referenceColumn": "user",
-            "columns": [
-              "mandatory"
-            ],
-            "reorderAction": "BEFORE_COLUMN",
-            "appliesTo": "SINGLE_COLUMN"
-          },
-          "alwaysShowComment": false
-        },
         {
           "preview": false,
           "metaType": "PROCESSOR",

@@ -11,6 +11,9 @@
           "map": {
             "request_submitted": {
               "repartition": 10
+            },
+            "required_files": {
+              "repartition": 10
             }
           }
         },
@@ -58,12 +61,7 @@
       ]
     },
     "scriptDeps": {
-      "items": [
-        {
-          "ref": "required_files",
-          "deps": []
-        }
-      ]
+      "items": []
     }
   },
   "outputs": {
@@ -77,11 +75,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 15,
+    "versionNumber": 16,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1599999781474
+    "lastModifiedOn": 1600009675799
   },
   "creationTag": {
     "versionNumber": 0,
