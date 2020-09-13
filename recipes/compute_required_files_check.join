@@ -33,17 +33,17 @@
       "table": 0
     },
     {
-      "name": "file_type",
-      "type": "string",
-      "table": 1
-    },
-    {
       "name": "comment",
       "type": "string",
       "table": 1
     },
     {
       "name": "initial_filename",
+      "type": "string",
+      "table": 1
+    },
+    {
+      "name": "status",
       "type": "string",
       "table": 1
     }
@@ -82,6 +82,7 @@
       }
     }
   },
+  "engineType": "DSS",
   "virtualInputs": [
     {
       "preFilter": {
@@ -102,7 +103,14 @@
       "computedColumns": []
     }
   ],
-  "computedColumns": [],
+  "computedColumns": [
+    {
+      "mode": "GREL",
+      "name": "available",
+      "expr": "if(strval(\"status\")\u003d\u003d\u0027ok\u0027, 1, 0)",
+      "type": "double"
+    }
+  ],
   "postFilter": {
     "$status": {
       "schema": {
@@ -116,16 +124,20 @@
             "type": "string"
           },
           {
-            "name": "file_type",
-            "type": "string"
-          },
-          {
             "name": "comment",
             "type": "string"
           },
           {
             "name": "initial_filename",
             "type": "string"
+          },
+          {
+            "name": "status",
+            "type": "string"
+          },
+          {
+            "name": "available",
+            "type": "double"
           }
         ],
         "userModified": false
