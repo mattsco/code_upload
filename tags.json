@@ -1,5 +1,8 @@
 {
   "tags": {
+    "duplicated": {
+      "color": "#3A85AD"
+    },
     "recipe-editor": {},
     "imported": {
       "color": "#263238"
