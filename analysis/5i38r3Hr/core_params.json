@@ -1,12 +1,38 @@
 {
   "inputDatasetSmartName": "last_result_per_file",
   "script": {
-    "steps": [],
+    "steps": [
+      {
+        "type": "DateFormatter",
+        "params": {
+          "format": "yyyy-MM-dd",
+          "inCol": "date",
+          "lang": "auto",
+          "timezone_id": "UTC"
+        },
+        "metaType": "PROCESSOR",
+        "preview": true,
+        "disabled": false,
+        "alwaysShowComment": false
+      }
+    ],
     "maxProcessedMemTableBytes": -1,
     "columnsSelection": {
       "mode": "ALL"
     },
-    "columnWidthsByName": {},
+    "columnWidthsByName": {
+      "file_type": 100,
+      "date": 183,
+      "outdated": 100,
+      "user": 100,
+      "dss_filename": 239,
+      "comment": 100,
+      "initial_filename": 274,
+      "diff_date": 113,
+      "only_after": 183,
+      "status": 100,
+      "rownumber": 100
+    },
     "coloring": {
       "scheme": "MEANING_AND_STATUS",
       "individualColumns": [],
@@ -40,7 +66,9 @@
       "autoRefreshSample": false,
       "_refreshTrigger": 0
     },
-    "exploreUIParams": {},
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
     "globalSearchQuery": "",
     "explorationFilters": [],
     "previewMode": "ALL_ROWS"
@@ -48,11 +76,11 @@
   "charts": [],
   "name": "Analyze last_result_per_file",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600274279768
+    "lastModifiedOn": 1600274334197
   },
   "creationTag": {
     "versionNumber": 0,
