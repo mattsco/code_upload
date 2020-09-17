@@ -27,7 +27,7 @@
             "tileType": "INSIGHT",
             "box": {
               "top": 0,
-              "left": 6,
+              "left": 4,
               "width": 2,
               "height": 2
             },
@@ -45,7 +45,7 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": 0,
+              "top": 5,
               "left": 10,
               "width": 2,
               "height": 2
@@ -96,11 +96,11 @@
   "name": "webapp upload\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 27,
+    "versionNumber": 28,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600314092877
+    "lastModifiedOn": 1600314107094
   },
   "creationTag": {
     "versionNumber": 0,
