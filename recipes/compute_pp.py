@@ -44,7 +44,7 @@ opt.sort_values(by=["mandatory"], ascending=[0], inplace=True)
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 #Join with config
 out = pd.merge(opt,df, how="left", left_on="file_list", right_on="file_type")
-out_small = out[["file_list","mandatory","status","initial_filename"]].fillna("missing")
+out_small = out[["file_list","mandatory","status","initial_filename", "comment"]].fillna("missing")
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 #Raise error if missing files.
