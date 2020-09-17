@@ -78,6 +78,15 @@
         "modes": [
           "READ"
         ]
+      },
+      {
+        "objectRef": {
+          "objectId": "bDGv9Em8",
+          "objectType": "MANAGED_FOLDER"
+        },
+        "modes": [
+          "READ"
+        ]
       }
     ]
   },
@@ -266,11 +275,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 37,
+    "versionNumber": 38,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600335026527
+    "lastModifiedOn": 1600335120359
   },
   "creationTag": {
     "versionNumber": 0,
