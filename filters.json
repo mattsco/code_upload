@@ -1,0 +1,33 @@
+{
+  "filters": [
+    {
+      "isAdvanced": false,
+      "scope": "PRIVATE",
+      "isDirty": true,
+      "creatorLogin": "admin",
+      "id": "262f0a58ae4ebedfed55efa463875a0768579689529f3eb34d6dc73eeac82446a586bf3ee3473c92c9626ffd2e06fc49dba0ff4f746e9138a99c2177273386d6",
+      "creationDate": 1600333131283,
+      "derivedFromFilterId": "-1",
+      "structuredFlowObjectFilter": {
+        "tags": [
+          "main"
+        ],
+        "types": [],
+        "creator": [],
+        "customCreationDateRange": {
+          "from": 0,
+          "to": 0
+        },
+        "customModificationDateRange": {
+          "from": 0,
+          "to": 0
+        },
+        "downstreamPredecessorsIds": [],
+        "datasetTypes": [],
+        "recipeTypes": []
+      },
+      "removeFadedElements": true,
+      "query": "tag:main"
+    }
+  ]
+}
