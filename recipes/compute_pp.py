@@ -35,6 +35,7 @@ df.sort_values(by=["date", "file_type"], ascending=[0,1], inplace=True)
 df.drop_duplicates(subset=["file_type"], keep='first', inplace=True)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+#Create dataframe
 f0 = eval(var["file_list"])
 f1 = eval(var["mandatory"])
 
