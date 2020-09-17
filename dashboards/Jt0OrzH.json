@@ -56,6 +56,7 @@
             },
             "autoLoad": true,
             "showTitle": "YES",
+            "title": "Clear ALL folders",
             "insightId": "PR9hEnN",
             "insightType": "scenario_run_button",
             "displayMode": "INSIGHT",
@@ -95,11 +96,11 @@
   "name": "webapp upload\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 26,
+    "versionNumber": 27,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600314086768
+    "lastModifiedOn": 1600314092877
   },
   "creationTag": {
     "versionNumber": 0,
