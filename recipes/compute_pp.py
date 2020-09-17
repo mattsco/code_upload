@@ -62,9 +62,6 @@ pp.write_with_schema(out_small)
 
 
 #Copy output files in folder.
-archive_folder_id = dataiku.get_custom_variables()["archive_folder"]
-
-
 output_folder = dataiku.Folder(files_folder_ID) 
 archived_folder = dataiku.Folder(archived_folder_ID)
 
