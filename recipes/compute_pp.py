@@ -9,6 +9,7 @@ archived_folder_ID = "vOv1eTkv"
 files_folder_ID = "bDGv9Em8"
 output_report = "output_report"
 
+colname = ['comment', 'date', 'dss_filename', 'file_type', 'initial_filename', 'status', 'user']
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 #Iterate on tracking files. 
@@ -43,7 +44,7 @@ opt.sort_values(by=["mandatory"], ascending=[0], inplace=True)
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 #Join with config
 out = pd.merge(opt,df, how="left", left_on="file_list", right_on="file_type")
-out_small = out[["file_list","mandatory","status"]].fillna("missing")
+out_small = out[["file_list","mandatory","status","initial_filename"]].fillna("missing")
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 #Raise error if missing files.
