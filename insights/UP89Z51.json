@@ -1,0 +1,30 @@
+{
+  "type": "managed-folder_content",
+  "params": {
+    "folderSmartId": "bDGv9Em8",
+    "isDirectory": false
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Content of folder files_folder",
+  "dashboardCreationId": "Jt0OrzH",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1600335120745
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1600335120745
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

@@ -85,6 +85,26 @@
             "insightType": "dataset_table",
             "displayMode": "INSIGHT",
             "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": -1,
+              "left": -1,
+              "width": 8,
+              "height": 5
+            },
+            "clickAction": "DO_NOTHING",
+            "tileParams": {
+              "minimal": false,
+              "showLegend": true
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
+            "insightId": "UP89Z51",
+            "insightType": "managed-folder_content",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
           }
         ]
       },
@@ -96,11 +116,11 @@
   "name": "webapp upload\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 30,
+    "versionNumber": 31,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600314114559
+    "lastModifiedOn": 1600335120751
   },
   "creationTag": {
     "versionNumber": 0,
