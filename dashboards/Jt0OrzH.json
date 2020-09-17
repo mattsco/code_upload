@@ -45,8 +45,8 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": 4,
-              "left": 10,
+              "top": 2,
+              "left": 4,
               "width": 2,
               "height": 2
             },
@@ -65,9 +65,9 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": 2,
+              "top": 4,
               "left": 4,
-              "width": 6,
+              "width": 8,
               "height": 6
             },
             "clickAction": "OPEN_INSIGHT",
@@ -89,10 +89,10 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": 8,
-              "left": 0,
-              "width": 12,
-              "height": 5
+              "top": 0,
+              "left": 6,
+              "width": 6,
+              "height": 4
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
@@ -116,11 +116,11 @@
   "name": "webapp upload\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 34,
+    "versionNumber": 35,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600335135689
+    "lastModifiedOn": 1600335200128
   },
   "creationTag": {
     "versionNumber": 0,
