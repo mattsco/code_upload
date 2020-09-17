@@ -1,9 +1,9 @@
 {
   "data": [
     [
-      null,
-      null,
-      null
+      "F1",
+      "txt",
+      "1"
     ]
   ],
   "schema": {
@@ -12,6 +12,6 @@
       {"name":"Extension","type":"string"},
       {"name":"mandatory","type":"string"}
     ],
-    "userModified": false
+    "userModified": true
   }
 }
