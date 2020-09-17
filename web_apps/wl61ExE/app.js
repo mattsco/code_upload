@@ -7,8 +7,9 @@ $.ajax({
         "Authorization" : "Basic " + btoa(dataiku.defaultAPIKey + ":" + "")
     }
 }).done(function(data){
-  
+   
     console.log("project variable:",data);
+    document.getElementById('only-after').innerHTML = data.standard["only_after"]
     f_html = ""
     f_html_upload = "<option value='' selected disabled hidden>Choose a file</option>"
     data.standard["file_list"].forEach(function(f){
