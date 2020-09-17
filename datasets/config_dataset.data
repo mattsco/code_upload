@@ -1,3 +1,15 @@
 {
-  "data": []
+  "data": [
+    [
+      "F1",
+      "txt"
+    ]
+  ],
+  "schema": {
+    "columns": [
+      {"name":"FileType","type":"string"},
+      {"name":"Extension","type":"string"}
+    ],
+    "userModified": false
+  }
 }
