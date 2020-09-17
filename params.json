@@ -275,11 +275,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 39,
+    "versionNumber": 40,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600335472469
+    "lastModifiedOn": 1600335746871
   },
   "creationTag": {
     "versionNumber": 0,
@@ -374,6 +374,13 @@
             "done": false,
             "text": "automate the run of the flow (no need a button in the dashboard) ",
             "createdOn": 1600335472398,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "automate the dataset creation from folder",
+            "createdOn": 1600335746813,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
