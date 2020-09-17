@@ -266,11 +266,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 31,
+    "versionNumber": 33,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600334200019
+    "lastModifiedOn": 1600334332349
   },
   "creationTag": {
     "versionNumber": 0,
@@ -321,8 +321,15 @@
           },
           {
             "done": false,
-            "text": "Selecting a reporting month\n",
+            "text": "Selecting a reporting month -\u003e default on previous month. \n",
             "createdOn": 1600334197551,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "Add upload datetime and user account name",
+            "createdOn": 1600334332289,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
