@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 8,
+    "versionNumber": 9,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600314591843
+    "lastModifiedOn": 1600333123961
   },
   "creationTag": {
     "versionNumber": 0,
@@ -72,7 +72,9 @@
     },
     "lastModifiedOn": 1600313179822
   },
-  "tags": [],
+  "tags": [
+    "main"
+  ],
   "params": {
     "connection": "filesystem_managed",
     "path": "${projectKey}/output_report",
@@ -107,7 +109,7 @@
         "type": "string"
       }
     ],
-    "userModified": false
+    "userModified": true
   },
   "metrics": {
     "probes": [
