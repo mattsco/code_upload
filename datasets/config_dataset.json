@@ -35,11 +35,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600334959595
+    "lastModifiedOn": 1600334983893
   },
   "creationTag": {
     "versionNumber": 0,
@@ -63,6 +63,10 @@
       },
       {
         "name": "Extension",
+        "type": "string"
+      },
+      {
+        "name": "mandatory",
         "type": "string"
       }
     ],

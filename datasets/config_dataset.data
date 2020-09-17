@@ -2,13 +2,15 @@
   "data": [
     [
       "F1",
-      "txt"
+      "txt",
+      "1"
     ]
   ],
   "schema": {
     "columns": [
       {"name":"FileType","type":"string"},
-      {"name":"Extension","type":"string"}
+      {"name":"Extension","type":"string"},
+      {"name":"mandatory","type":"string"}
     ],
     "userModified": false
   }
