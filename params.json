@@ -266,11 +266,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 35,
+    "versionNumber": 36,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600334562736
+    "lastModifiedOn": 1600334665921
   },
   "creationTag": {
     "versionNumber": 0,
@@ -344,6 +344,13 @@
             "done": false,
             "text": "Another column for extension. Allow txt , csv, xlsx",
             "createdOn": 1600334562671,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "Use convention of filename for validation doing the upload. ",
+            "createdOn": 1600334665871,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
