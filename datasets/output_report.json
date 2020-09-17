@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600313972274
+    "lastModifiedOn": 1600314528988
   },
   "creationTag": {
     "versionNumber": 0,
@@ -96,6 +96,10 @@
       },
       {
         "name": "status",
+        "type": "string"
+      },
+      {
+        "name": "initial_filename",
         "type": "string"
       }
     ],
