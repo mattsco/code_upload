@@ -266,11 +266,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 36,
+    "versionNumber": 37,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600334665921
+    "lastModifiedOn": 1600335026527
   },
   "creationTag": {
     "versionNumber": 0,
@@ -351,6 +351,13 @@
             "done": false,
             "text": "Use convention of filename for validation doing the upload. ",
             "createdOn": 1600334665871,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "use editable dataset instead of variable",
+            "createdOn": 1600335026475,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
