@@ -2,6 +2,17 @@
   "type": "update",
   "neverRecomputeExistingPartitions": false,
   "optionalDependencies": false,
+  "params": {
+    "uniqueKey": [],
+    "filter": {
+      "distinct": false,
+      "enabled": false
+    },
+    "deleteMissingRows": false,
+    "addMissingRows": true,
+    "deleteMissingCols": false,
+    "addMissingCols": true
+  },
   "customMeta": {
     "kv": {}
   },
@@ -28,11 +39,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600334896108
+    "lastModifiedOn": 1600334898510
   },
   "creationTag": {
     "versionNumber": 0,
