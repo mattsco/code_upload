@@ -89,9 +89,9 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": -1,
-              "left": -1,
-              "width": 8,
+              "top": 8,
+              "left": 0,
+              "width": 12,
               "height": 5
             },
             "clickAction": "DO_NOTHING",
@@ -116,11 +116,11 @@
   "name": "webapp upload\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 32,
+    "versionNumber": 33,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600335121995
+    "lastModifiedOn": 1600335128637
   },
   "creationTag": {
     "versionNumber": 0,
