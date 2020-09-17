@@ -275,11 +275,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 38,
+    "versionNumber": 39,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600335120359
+    "lastModifiedOn": 1600335472469
   },
   "creationTag": {
     "versionNumber": 0,
@@ -367,6 +367,13 @@
             "done": false,
             "text": "use editable dataset instead of variable",
             "createdOn": 1600335026475,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "automate the run of the flow (no need a button in the dashboard) ",
+            "createdOn": 1600335472398,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
