@@ -54,6 +54,24 @@ if "missing" in out_small[out_small["mandatory"]=="1"].status.unique():
     raise Exception("Mandatory file missing: %s"%(m))
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-# Write recipe outputs
+# Write report
 pp = dataiku.Dataset("output_report")
 pp.write_with_schema(out_small)
+
+
+#Copy output files in folder.
+archive_folder_id = dataiku.get_custom_variables()["archive_folder"]
+
+
+output_folder = dataiku.Folder(files_folder_ID) 
+archived_folder = dataiku.Folder(archived_folder_ID)
+
+output_folder.clear()
+print df.columns
+for i, row in df.iterrows():
+
+    file_type = row["file_type"]
+    file_name = row["dss_filename"]
+    file_stream = archived_folder.get_download_stream(file_name)
+    output_folder.upload_stream(file_name, file_stream)
+    print("File %s uploaded for %s"%(file_name, file_type))
