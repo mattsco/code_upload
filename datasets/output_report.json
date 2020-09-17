@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600313179822
+    "lastModifiedOn": 1600313602195
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,8 +85,21 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {
+        "name": "file_list",
+        "type": "string"
+      },
+      {
+        "name": "mandatory",
+        "type": "string"
+      },
+      {
+        "name": "status",
+        "type": "string"
+      }
+    ],
+    "userModified": false
   },
   "metrics": {
     "probes": [
