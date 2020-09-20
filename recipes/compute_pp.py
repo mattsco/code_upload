@@ -70,10 +70,10 @@ df = pd.DataFrame(list_tracking)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 #Filter records before only after date
-var = dataiku.get_custom_variables()
-date_only_after = var["only_after"]
-df = df[df["date"]>=date_only_after]
-df
+#var = dataiku.get_custom_variables()
+#date_only_after = var["only_after"]
+#df = df[df["date"]>=date_only_after]
+#df
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 #Keep last date for a specific file type.
