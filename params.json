@@ -275,11 +275,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 51,
+    "versionNumber": 52,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600616362883
+    "lastModifiedOn": 1600620018517
   },
   "creationTag": {
     "versionNumber": 0,
@@ -350,7 +350,7 @@
             "stateChangedOn": 0
           },
           {
-            "done": false,
+            "done": true,
             "text": "automate the dataset creation from folder",
             "createdOn": 1600335746813,
             "createdBy": "admin",
