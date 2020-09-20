@@ -275,11 +275,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 41,
+    "versionNumber": 46,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600399933219
+    "lastModifiedOn": 1600613360834
   },
   "creationTag": {
     "versionNumber": 0,
@@ -302,34 +302,6 @@
         "items": [
           {
             "done": true,
-            "text": "Create the project",
-            "createdOn": 1595298523593,
-            "createdBy": "admin",
-            "stateChangedOn": 0
-          },
-          {
-            "done": true,
-            "text": "Set a project image (click on the color next to the project title)",
-            "createdOn": 1595298523593,
-            "createdBy": "admin",
-            "stateChangedOn": 0
-          },
-          {
-            "done": true,
-            "text": "Import your [first dataset](projects/WEBAPPUPLOAD/datasets/new/)",
-            "createdOn": 1595298523594,
-            "createdBy": "admin",
-            "stateChangedOn": 0
-          },
-          {
-            "done": true,
-            "text": "Organize your work by replacing this with a real todo",
-            "createdOn": 1595298523594,
-            "createdBy": "admin",
-            "stateChangedOn": 0
-          },
-          {
-            "done": false,
             "text": "Selecting a reporting month -\u003e default on previous month. \n",
             "createdOn": 1600334197551,
             "createdBy": "admin",
