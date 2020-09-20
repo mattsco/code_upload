@@ -25,21 +25,7 @@ $.ajax({
     })
     document.getElementById('month-select').innerHTML = f_html_upload;
     
-    f_html = ""
-    f_html_upload = "<option value='' selected disabled hidden>Choose a file</option>"
-    data.standard["file_list"].forEach(function(f){
-        var html = `
-            <div class="checkbox">
-                <input type="checkbox" name="${f}" id="${f}" />
-                <label for="${f}">${f}</label>
-            </div>`;
-        var html_upload = `
-            <option value="${f}">${f}</option>`;
-        f_html = f_html + html
-        f_html_upload = f_html_upload + html_upload
-    })
-    document.getElementById('file-select').innerHTML = f_html_upload;
-    
+
 });
         
 
