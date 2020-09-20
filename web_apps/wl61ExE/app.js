@@ -9,10 +9,10 @@ $.ajax({
 }).done(function(data){
    
     console.log("project variable:",data);
-
-    f_html = ""
-    f_html_upload = "<option value='' selected disabled hidden>Choose month</option>"
-    data.standard["mandatory"].forEach(function(f){
+    prev = data.standard["list_month"];
+    f_html = "";
+    f_html_upload = "<option value="+prev+" selected disabled hidden>"+prev+"</option>";
+    data.standard["list_month"].forEach(function(f){
         var html = `
             <div class="checkbox">
                 <input type="checkbox" name="${f}" id="${f}" />
