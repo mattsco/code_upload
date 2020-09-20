@@ -10,8 +10,8 @@ archive_folder = var["archive_folder"]
 tracking_folder = var["tracking_folder"] 
 default_file_extension = var["default_file_extension"] 
 file_list = var["file_list"] 
-
-
+ext_list = var["extension"] 
+extension_dict = dict(zip(eval(file_list),eval(ext_list)))
 
 @app.route('/upload-to-dss', methods = ['POST'])
 def upload_to_dss():
@@ -22,7 +22,7 @@ def upload_to_dss():
         return json.dumps({"status":"No file sent to backend"})
     initial_filename = f.filename
     extension = os.path.splitext(initial_filename)[1]
-    if extension != default_file_extension:
+    if extension != extension_dict[initial_filename]:
         return json.dumps({"status":"Extension must be '%s', '%s' was found"%(default_file_extension, extension)})
 
     
