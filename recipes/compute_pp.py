@@ -91,7 +91,7 @@ df_t.drop_duplicates(subset=["file_type"], keep='first', inplace=True)
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 #Join with config
 out = pd.merge(df,df_t, how="left", left_on="Filename Convention", right_on="file_type")
-out_small = out[["date", "file_list", "mandatory","status", "initial_filename", "comment", 'user']]
+out_small = out[["date", col_file_name, col_mandatory, "status", "initial_filename", "comment", 'user']]
 out_small["status"].fillna("missing", inplace=True)
 
 
