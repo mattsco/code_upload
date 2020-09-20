@@ -106,7 +106,7 @@ if "missing" in out_small[out_small[col_mandatory]=="Yes"].status.unique():
     out_tmp = out_small[out_small[col_mandatory]=="Yes"]
     out_tmp = out_tmp[out_tmp["status"]=="missing"]
     m = ", ".join(list(out_tmp[col_file_name].values))
-    raise Exception("File missing: %s"%(m))
+    raise Exception("Files missing: %s"%(m))
 
 
 #Copy output files in folder.
