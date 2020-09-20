@@ -65,7 +65,7 @@ for tracking_file in paths:
     with tracking_folder.get_download_stream(tracking_file) as f:
         list_tracking.append(eval(f.read()))
 
-df = pd.DataFrame(list_tracking)
+df_t = pd.DataFrame(list_tracking)
 if len(df) == 0:
     raise Exception("Folders empty")
 
@@ -78,20 +78,20 @@ if len(df) == 0:
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 #Keep last date for a specific file type.
-df.sort_values(by=["date", "file_type"], ascending=[0,1], inplace=True)
-df.drop_duplicates(subset=["file_type"], keep='first', inplace=True)
+df_t.sort_values(by=["dss_filename", "file_type"], ascending=[0,1], inplace=True)
+df_t.drop_duplicates(subset=["file_type"], keep='first', inplace=True)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 #Create dataframe from variables
-f0 = eval(var["file_list"])
-f1 = eval(var["mandatory"])
-opt = pd.DataFrame(zip(f0,f1), columns=["file_list","mandatory"])
-opt.sort_values(by=["mandatory"], ascending=[0], inplace=True)
+#f0 = eval(var["file_list"])
+#f1 = eval(var["mandatory"])
+#opt = pd.DataFrame(zip(f0,f1), columns=["file_list","mandatory"])
+#opt.sort_values(by=["mandatory"], ascending=[0], inplace=True)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 #Join with config
-out = pd.merge(opt,df, how="left", left_on="file_list", right_on="file_type")
-out_small = out[["date", "file_list","mandatory","status","initial_filename", "comment", 'user']]
+out = pd.merge(df,df_t, how="left", left_on="Filename Convention", right_on="file_type")
+out_small = out[["date", "file_list", "mandatory","status", "initial_filename", "comment", 'user']]
 out_small["status"].fillna("missing", inplace=True)
 
 
