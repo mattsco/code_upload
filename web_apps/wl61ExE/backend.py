@@ -16,13 +16,15 @@ extension_dict = dict(zip(eval(file_list),eval(ext_list)))
 @app.route('/upload-to-dss', methods = ['POST'])
 def upload_to_dss():
     
+    selected_file = request.form.get('selected_file')
+    
     #get file
     f = request.files.get('file')
     if f is None:
         return json.dumps({"status":"No file sent to backend"})
     initial_filename = f.filename
     extension = os.path.splitext(initial_filename)[1]
-    if extension != extension_dict[initial_filename]:
+    if extension != extension_dict[selected_file]:
         return json.dumps({"status":"Extension must be '%s', '%s' was found"%(default_file_extension, extension)})
 
     
@@ -35,7 +37,7 @@ def upload_to_dss():
     now = datetime.now()
     date = now.strftime("%Y-%m-%d-%H-%M-%S")
   
-    selected_file = request.form.get('selected_file')
+    
     selected_month = request.form.get('selected_month')
     comment = request.form.get('comment')
     
