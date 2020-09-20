@@ -26,6 +26,10 @@
         {
           "ref": "vOv1eTkv",
           "deps": []
+        },
+        {
+          "ref": "config_editable",
+          "deps": []
         }
       ]
     }
@@ -45,11 +49,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 16,
+    "versionNumber": 17,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600612880481
+    "lastModifiedOn": 1600612895757
   },
   "creationTag": {
     "versionNumber": 0,
