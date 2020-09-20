@@ -9,7 +9,7 @@ $.ajax({
 }).done(function(data){
    
     console.log("project variable:",data);
-    prev = data.standard["list_month"];
+    prev = data.standard["previous_month"];
     f_html = "";
     f_html_upload = "<option value="+prev+" selected disabled hidden>"+prev+"</option>";
     data.standard["list_month"].forEach(function(f){
