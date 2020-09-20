@@ -94,6 +94,12 @@ out = pd.merge(opt,df, how="left", left_on="file_list", right_on="file_type")
 out_small = out[["date", "file_list","mandatory","status","initial_filename", "comment", 'user']]
 out_small["status"].fillna("missing", inplace=True)
 
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+# Write report
+pp = dataiku.Dataset("output_report")
+pp.write_with_schema(out_small)
+
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 #Raise error if missing files.
 if "missing" in out_small[out_small["mandatory"]=="1"].status.unique():
@@ -101,11 +107,6 @@ if "missing" in out_small[out_small["mandatory"]=="1"].status.unique():
     out_tmp = out_tmp[out_tmp["status"]=="missing"]
     m = ",".join(list(out_tmp.file_list.values))
     raise Exception("Mandatory file missing: %s"%(m))
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-# Write report
-pp = dataiku.Dataset("output_report")
-pp.write_with_schema(out_small)
 
 
 #Copy output files in folder.
