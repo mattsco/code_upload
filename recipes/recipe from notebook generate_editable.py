@@ -1,9 +1,11 @@
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 import dataiku
 from dataiku import pandasutils as pdu
 import pandas as pd
+from datetime import datetime
+import dateutil.relativedelta
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-
 mydataset = dataiku.Dataset("config_editable")
 df = mydataset.get_dataframe()
 
@@ -24,3 +26,14 @@ v["standard"]["extention"] = list(df[col_extention].values)
 v["standard"]["mandatory"] = list(df[col_mandatory].values)
 p.set_variables(v)
 
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+today = str(datetime.today()).split()[0]
+d = datetime.strptime(today, "%Y-%m-%d")
+
+l_month = []
+for i in range(6):
+    d2 = datetime.today() - dateutil.relativedelta.relativedelta(months=i)
+    l_month.append(str(d2)[:7])
+
+v["standard"]["list_month"] = l_month
+p.set_variables(v)
