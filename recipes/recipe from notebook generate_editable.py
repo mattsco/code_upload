@@ -1,16 +1,9 @@
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE_MAGIC_CELL
-# Automatically replaced inline charts by "no-op" charts
-# %pylab inline
-import matplotlib
-matplotlib.use("Agg")
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 import dataiku
 from dataiku import pandasutils as pdu
 import pandas as pd
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-# Example: load a DSS dataset as a Pandas dataframe
+
 mydataset = dataiku.Dataset("config_editable")
 df = mydataset.get_dataframe()
 
@@ -31,10 +24,3 @@ v["standard"]["extention"] = list(df[col_extention].values)
 v["standard"]["mandatory"] = list(df[col_mandatory].values)
 p.set_variables(v)
 
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-df["Filename Convention"]
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-# Recipe outputs
-update_var = dataiku.Dataset("update_var")
-update_var.write_with_schema(pandas_dataframe)
