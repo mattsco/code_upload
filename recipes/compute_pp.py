@@ -137,5 +137,7 @@ for i, row in df_t.iterrows():
              u'folderSmartId': files_folder_ID,
              u'notReadyIfEmpty': False}
 
-
-    p.create_dataset("FIF_" + file_type_clean, 'FilesInFolder', params=params, formatType="excel", formatParams=None)
+    try:
+        p.create_dataset("FIF_" + file_type_clean, 'FilesInFolder', params=params, formatType="excel", formatParams=None)
+    except:
+        print(file_type_clean + "  already exists")
