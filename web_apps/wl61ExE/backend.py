@@ -59,7 +59,7 @@ def upload_to_dss():
     submission["comment"] = comment
 
     try:
-        dataiku.Folder(tracking_folder).upload_stream("%s_%s_%s.json"%(date, selected_file, user), json.dumps(submission))
+        dataiku.Folder(tracking_folder).upload_stream("%s_%s_%s.json"%(selected_month, selected_file, user), json.dumps(submission))
         status = "ok"
 
     except Exception as e:
