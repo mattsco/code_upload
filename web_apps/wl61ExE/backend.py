@@ -189,7 +189,7 @@ def code_recipe():
     archived_folder = dataiku.Folder(archived_folder_ID)
 
     output_folder.clear()
-    print df_t.columns
+    print (df_t.columns)
     for i, row in df_t.iterrows():
 
         file_type = row["file_type"]
