@@ -12,6 +12,20 @@
       "explicitFiles": []
     }
   },
+  "partitioning": {
+    "filePathPattern": "%M/.*",
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": [
+      {
+        "name": "month",
+        "params": {
+          "period": "MONTH"
+        },
+        "type": "time"
+      }
+    ]
+  },
   "flowOptions": {
     "virtualizable": false,
     "rebuildBehavior": "NORMAL",
@@ -88,11 +102,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600333123950
+    "lastModifiedOn": 1600613708684
   },
   "creationTag": {
     "versionNumber": 0,
