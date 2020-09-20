@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 #UPDATE CONFIG
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 import dataiku
