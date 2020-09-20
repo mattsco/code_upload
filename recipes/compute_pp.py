@@ -128,3 +128,14 @@ for i, row in df_t.iterrows():
     print("File %s uploaded for %s"%(file_name, file_type))
     
     
+    params = {u'filesSelectionRules': {u'excludeRules': [],
+              u'explicitFiles': [],
+              u'includeRules': [{u'expr': file_type_clean,
+                u'matchingMode': u'FULL_PATH',
+                u'mode': u'GLOB'}],
+              u'mode': u'RULES_INCLUDED_ONLY'},
+             u'folderSmartId': u'bDGv9Em8',
+             u'notReadyIfEmpty': False}
+
+
+    p.create_dataset(file_type_clean, 'FilesInFolder', params=params, formatType="excel", formatParams=None)
