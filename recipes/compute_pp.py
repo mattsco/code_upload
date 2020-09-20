@@ -117,7 +117,7 @@ output_folder.clear()
 print df.columns
 for i, row in df.iterrows():
 
-    file_type = row["file_type"]
+    file_type = row[col_file_name]
     file_name = row["dss_filename"]
     file_stream = archived_folder.get_download_stream(file_name)
     output_folder.upload_stream(file_name, file_stream)
