@@ -11,7 +11,7 @@ $.ajax({
     console.log("project variable:",data);
     prev = data.standard["previous_month"];
     f_html = "";
-    f_html_upload = "<option value="+prev+" selected >"+prev+"</option>";
+    f_html_upload = "<option value="+prev+" selected hidden>"+prev+"</option>";
     data.standard["list_month"].forEach(function(f){
         var html = `
             <div class="checkbox">
