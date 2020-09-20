@@ -105,7 +105,7 @@ pp.write_with_schema(out_small)
 if "missing" in out_small[out_small[col_mandatory]=="Yes"].status.unique():
     out_tmp = out_small[out_small[col_mandatory]=="Yes"]
     out_tmp = out_tmp[out_tmp["status"]=="missing"]
-    m = ",".join(list(out_tmp[col_file_name].values))
+    m = ", ".join(list(out_tmp[col_file_name].values))
     raise Exception("Mandatory file missing: %s"%(m))
 
 
