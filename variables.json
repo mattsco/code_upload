@@ -1,28 +1,39 @@
 {
-  "only_after": "2020-07-27",
-  "file_list": [
-    "F1 (csv)",
-    "B2434",
-    "F3 (txt)",
-    "F4",
-    "F5",
-    "F6",
-    "F7",
-    "F8",
-    "F9"
-  ],
-  "mandatory": [
-    "1",
-    "1",
-    "1",
-    "0",
-    "0",
-    "0",
-    "0",
-    "0",
-    "0"
-  ],
   "archive_folder": "vOv1eTkv",
+  "mandatory": [
+    "Yes",
+    "Yes",
+    "Yes",
+    "Yes",
+    "Yes",
+    "Yes",
+    "Yes",
+    "Optional, upload when there is a change",
+    "Optional, upload when there is a change"
+  ],
   "tracking_folder": "3zAYHyFW",
-  "default_file_extension": ".csv"
+  "extention": [
+    "xlsx",
+    "xlsx",
+    "xlsx",
+    "xlsx",
+    "xlsx",
+    "xlsx",
+    "xlsx",
+    "xlsx",
+    "xlsx"
+  ],
+  "default_file_extension": ".csv",
+  "file_list": [
+    "AMADEUS_IPP_IPD_MMMYYYY.xls",
+    "Group Avg and PE Rate - MMMYYYY.xls",
+    "Unwind Discount - including ME MMMYYYY.xls",
+    "Prosum Group - Including ME MMMYYYY.xlsx",
+    "PSGL Dump_MMMYYYY.xlsx",
+    "PSGL Dump BU342 MMMYYYY.xlsx",
+    "PSGL Dump Contingents MMMYYYY.xlsx",
+    "CClass_Broad_Segment_mapping.xlsx",
+    "Amadeus_customer_segment_mapping.xlsx"
+  ],
+  "only_after": "2020-07-27"
 }
