@@ -25,7 +25,7 @@ def upload_to_dss():
     initial_filename = f.filename
     extension = os.path.splitext(initial_filename)[1]
     if extension != extension_dict[selected_file]:
-        return json.dumps({"status":"Extension must be '%s', '%s' was found"%(default_file_extension, extension)})
+        return json.dumps({"status":"Extension must be '%s', '%s' was found"%(extension_dict[selected_file], extension)})
 
     
     #get user
