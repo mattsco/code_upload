@@ -28,7 +28,7 @@ def upload_to_dss():
     if extension != expected_extension:
         return json.dumps({"status":"Extension must be '%s', '%s' was found"%(expected_extension, extension)})
 
-    
+
     #get user
     request_headers = dict(request.headers)
     user = client.get_auth_info_from_browser_headers(request_headers)["authIdentifier"]
