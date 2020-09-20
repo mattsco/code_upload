@@ -42,7 +42,7 @@ def upload_to_dss():
     selected_month = request.form.get('selected_month')
     comment = request.form.get('comment')
     
-    dss_filename = '%s_%s_%s%s' %(date, selected_file, user, extension)
+    dss_filename = '%s_%s_%s.%s' %(selected_month, selected_file.split(".")[0], user, extension)
     
     #Save uploaded file
     try:
