@@ -275,11 +275,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 46,
+    "versionNumber": 47,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600613360834
+    "lastModifiedOn": 1600613430160
   },
   "creationTag": {
     "versionNumber": 0,
@@ -308,7 +308,7 @@
             "stateChangedOn": 0
           },
           {
-            "done": false,
+            "done": true,
             "text": "Add upload datetime and user account name",
             "createdOn": 1600334332289,
             "createdBy": "admin",
