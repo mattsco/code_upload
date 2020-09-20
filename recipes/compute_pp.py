@@ -134,8 +134,8 @@ for i, row in df_t.iterrows():
                 u'matchingMode': u'FULL_PATH',
                 u'mode': u'GLOB'}],
               u'mode': u'RULES_INCLUDED_ONLY'},
-             u'folderSmartId': u'bDGv9Em8',
+             u'folderSmartId': files_folder_ID,
              u'notReadyIfEmpty': False}
 
 
-    p.create_dataset(file_type_clean, 'FilesInFolder', params=params, formatType="excel", formatParams=None)
+    p.create_dataset("FIF_" + file_type_clean, 'FilesInFolder', params=params, formatType="excel", formatParams=None)
