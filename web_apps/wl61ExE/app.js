@@ -64,12 +64,13 @@ $('#upload-button').click(function() {
         return
     }
 
-    
+    selected_month = document.getElementById('month-select').value
     selected_file = document.getElementById('file-select').value
     comment = commentsInput.value
     let newFile = $('#new-file')[0].files[0];
     let form = new FormData();
     form.append('file', newFile);
+    form.append('selected_month', selected_month);
     form.append('selected_file', selected_file);
     form.append('comment',  comment);
     

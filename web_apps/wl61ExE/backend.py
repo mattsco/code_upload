@@ -36,6 +36,7 @@ def upload_to_dss():
     date = now.strftime("%Y-%m-%d-%H-%M-%S")
   
     selected_file = request.form.get('selected_file')
+    selected_month = request.form.get('selected_month')
     comment = request.form.get('comment')
     
     dss_filename = '%s_%s_%s%s' %(date, selected_file, user, extension)
@@ -51,6 +52,7 @@ def upload_to_dss():
     #Write metadata
     submission = {"status":status, "date":date, "user":user, "initial_filename":f.filename, "dss_filename":dss_filename}
     submission["file_type"] = selected_file 
+    submission["selected_month"] = selected_month 
     submission["comment"] = comment
 
     try:
