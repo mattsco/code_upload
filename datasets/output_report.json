@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 10,
+    "versionNumber": 11,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600333707816
+    "lastModifiedOn": 1600614620045
   },
   "creationTag": {
     "versionNumber": 0,
@@ -89,11 +89,15 @@
   "schema": {
     "columns": [
       {
-        "name": "file_list",
+        "name": "date",
         "type": "string"
       },
       {
-        "name": "mandatory",
+        "name": "Filename Convention",
+        "type": "string"
+      },
+      {
+        "name": "Mandatory for Monthly Upload",
         "type": "string"
       },
       {
@@ -106,6 +110,10 @@
       },
       {
         "name": "comment",
+        "type": "string"
+      },
+      {
+        "name": "user",
         "type": "string"
       }
     ],
