@@ -102,8 +102,8 @@ pp.write_with_schema(out_small)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 #Raise error if missing files.
-if "missing" in out_small[out_small["mandatory"]=="1"].status.unique():
-    out_tmp = out_small[out_small["mandatory"]=="1"]
+if "missing" in out_small[out_small[col_mandatory]=="Yes"].status.unique():
+    out_tmp = out_small[out_small[col_mandatory]=="Yes"]
     out_tmp = out_tmp[out_tmp["status"]=="missing"]
     m = ",".join(list(out_tmp.file_list.values))
     raise Exception("Mandatory file missing: %s"%(m))
