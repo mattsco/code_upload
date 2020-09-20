@@ -1,3 +1,77 @@
 {
-  "data": []
+  "data": [
+    [
+      "1.0",
+      "AMADEUS_IPP_IPD_MMMYYYY.xls",
+      "xlsx",
+      "Yes",
+      "2 tabs – IPP \u0026 IPD, 2nd Row should be Header, 9 columns"
+    ],
+    [
+      "2.0",
+      "Group Avg and PE Rate - MMMYYYY.xls",
+      "xlsx",
+      "Yes",
+      "4 columns – header from 2nd row"
+    ],
+    [
+      "3.0",
+      "Unwind Discount - including ME MMMYYYY.xls",
+      "xlsx",
+      "Yes",
+      "Header from 2nd Row Col – GSAM/SCF should be present"
+    ],
+    [
+      "4.0",
+      "Prosum Group - Including ME MMMYYYY.xlsx",
+      "xlsx",
+      "Yes",
+      "Header from 1st row. Col – GSAM/SCF should be present"
+    ],
+    [
+      "5.0",
+      "PSGL Dump_MMMYYYY.xlsx",
+      "xlsx",
+      "Yes",
+      "Header from 18th Row – Col – 12"
+    ],
+    [
+      "6.0",
+      "PSGL Dump BU342 MMMYYYY.xlsx",
+      "xlsx",
+      "Yes",
+      "Header from 17th Row – Col – 10"
+    ],
+    [
+      "7.0",
+      "PSGL Dump Contingents MMMYYYY.xlsx",
+      "xlsx",
+      "Yes",
+      "Header from 17th Row – Col – 15"
+    ],
+    [
+      "8.0",
+      "CClass_Broad_Segment_mapping.xlsx",
+      "xlsx",
+      "Optional, upload when there is a change",
+      "NIL"
+    ],
+    [
+      "9.0",
+      "Amadeus_customer_segment_mapping.xlsx",
+      "xlsx",
+      "Optional, upload when there is a change",
+      "NIL"
+    ]
+  ],
+  "schema": {
+    "columns": [
+      {"name":"S/N","type":"string"},
+      {"name":"Filename Convention","type":"string"},
+      {"name":"File Extension","type":"string"},
+      {"name":"Mandatory for Monthly Upload","type":"string"},
+      {"name":"Data Quality Check (skip lines before column header, no. of columns, min. no. of records, CCIS-ID validation, LEID validation etc.)","type":"string"}
+    ],
+    "userModified": true
+  }
 }

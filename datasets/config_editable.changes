@@ -1,0 +1,77 @@
+{
+  "data": [
+    [
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    [
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    [
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    [
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    [
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    [
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    [
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    [
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    [
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ]
+  ],
+  "schema": {
+    "columns": [
+      {"name":"S/N","type":"string"},
+      {"name":"Filename Convention","type":"string"},
+      {"name":"File Extension","type":"string"},
+      {"name":"Mandatory for Monthly Upload","type":"string"},
+      {"name":"Data Quality Check (skip lines before column header, no. of columns, min. no. of records, CCIS-ID validation, LEID validation etc.)","type":"string"}
+    ],
+    "userModified": true
+  }
+}
