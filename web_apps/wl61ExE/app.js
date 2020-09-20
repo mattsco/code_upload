@@ -11,7 +11,7 @@ $.ajax({
     console.log("project variable:",data);
 
     f_html = ""
-    f_html_upload = "<option value='' selected disabled hidden>Choose a file</option>"
+    f_html_upload = "<option value='' selected disabled hidden>Choose month</option>"
     data.standard["mandatory"].forEach(function(f){
         var html = `
             <div class="checkbox">
