@@ -90,7 +90,7 @@ df_t.drop_duplicates(subset=["file_type"], keep='first', inplace=True)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 #Join with config
-out = pd.merge(df,df_t, how="left", left_on="Filename Convention", right_on="file_type")
+out = pd.merge(df,df_t, how="left", left_on=col_file_name, right_on="file_type")
 out_small = out[["date", col_file_name, col_mandatory, "status", "initial_filename", "comment", 'user']]
 out_small["status"].fillna("missing", inplace=True)
 
@@ -105,7 +105,7 @@ pp.write_with_schema(out_small)
 if "missing" in out_small[out_small[col_mandatory]=="Yes"].status.unique():
     out_tmp = out_small[out_small[col_mandatory]=="Yes"]
     out_tmp = out_tmp[out_tmp["status"]=="missing"]
-    m = ",".join(list(out_tmp.file_list.values))
+    m = ",".join(list(out_tmp[col_file_name].values))
     raise Exception("Mandatory file missing: %s"%(m))
 
 
