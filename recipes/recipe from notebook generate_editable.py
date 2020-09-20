@@ -34,4 +34,8 @@ for i in range(6):
     l_month.append(str(d2)[:7])
 
 v["standard"]["list_month"] = l_month
+
+d2 = datetime.today() - dateutil.relativedelta.relativedelta(months=1)
+v["standard"]["previous_month"] = str(d2)[:7]
+
 p.set_variables(v)
