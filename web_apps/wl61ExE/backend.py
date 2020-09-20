@@ -66,9 +66,11 @@ def upload_to_dss():
         print("Submission failed")
         status = str(e)
     
-        
-    code_recipe()
-
+    try:
+        code_recipe()
+    except:
+        pass
+    
     return json.dumps(submission)
 
 
