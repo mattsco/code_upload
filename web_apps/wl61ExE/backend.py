@@ -53,9 +53,9 @@ def upload_to_dss():
         status = str(e)
 
     #Write metadata
-    submission = {"status":status, "date":date, "user":user, "initial_filename":f.filename, "dss_filename":dss_filename}
+    submission = {"status":status, "upload_date":date, "user":user, "initial_filename":f.filename, "dss_filename":dss_filename}
     submission["file_type"] = selected_file 
-    submission["selected_month"] = selected_month 
+    submission["file_month"] = selected_month 
     submission["comment"] = comment
 
     try:
@@ -67,6 +67,8 @@ def upload_to_dss():
         status = str(e)
     
         
+    
+
     return json.dumps(submission)
 
 
