@@ -120,8 +120,9 @@ for i, row in df_t.iterrows():
     file_type = row["file_type"]
     file_name = row["dss_filename"]
     file_stream = archived_folder.get_download_stream(file_name)
-    file_type_clean = file_type.split(".")[0].replace("-"," ").replace(" ","_").replace("MMMYYYY","")
-    file_type_clean = file_type_clean.replace("__","_").replace("_"," ").strip() 
+    file_type_clean = file_type.split(".")[0].replace("-"," ").replace("_"," ").replace("MMMYYYY","")
+    for i in range(4):
+        file_type_clean = file_type_clean.replace("  "," ").strip() 
     file_type_clean = file_type_clean.replace(" ","_")
     output_folder.upload_stream(file_type_clean, file_stream)
     print("File %s uploaded for %s"%(file_name, file_type))
