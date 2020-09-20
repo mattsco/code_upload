@@ -67,6 +67,8 @@ for tracking_file in paths:
         list_tracking.append(eval(f.read()))
 
 df = pd.DataFrame(list_tracking)
+if len(df) == 0:
+    raise Exception("Folders empty")
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 #Filter records before only after date
