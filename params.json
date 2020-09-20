@@ -275,11 +275,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 47,
+    "versionNumber": 49,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600613430160
+    "lastModifiedOn": 1600615946682
   },
   "creationTag": {
     "versionNumber": 0,
@@ -315,14 +315,14 @@
             "stateChangedOn": 0
           },
           {
-            "done": false,
+            "done": true,
             "text": "Ability to use the last avalaible file even from a previous month. ",
             "createdOn": 1600334470637,
             "createdBy": "admin",
             "stateChangedOn": 0
           },
           {
-            "done": false,
+            "done": true,
             "text": "Another column for extension. Allow txt , csv, xlsx",
             "createdOn": 1600334562671,
             "createdBy": "admin",
