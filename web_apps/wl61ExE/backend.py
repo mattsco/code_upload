@@ -189,14 +189,32 @@ def code_recipe():
     archived_folder = dataiku.Folder(archived_folder_ID)
 
     output_folder.clear()
-    print (df_t.columns)
+    print df_t.columns
     for i, row in df_t.iterrows():
 
         file_type = row["file_type"]
         file_name = row["dss_filename"]
         file_stream = archived_folder.get_download_stream(file_name)
-        output_folder.upload_stream(file_name, file_stream)
+        file_type_clean = file_type.split(".")[0].replace("-"," ").replace("_"," ").replace("MMMYYYY","")
+        for i in range(4):
+            file_type_clean = file_type_clean.replace("  "," ").strip() 
+        file_type_clean = file_type_clean.replace(" ","_")
+        output_folder.upload_stream(file_type_clean, file_stream)
         print("File %s uploaded for %s"%(file_name, file_type))
-    
-    
+
+
+        params = {u'filesSelectionRules': {u'excludeRules': [],
+                  u'explicitFiles': [],
+                  u'includeRules': [{u'expr': file_type_clean,
+                    u'matchingMode': u'FULL_PATH',
+                    u'mode': u'GLOB'}],
+                  u'mode': u'RULES_INCLUDED_ONLY'},
+                 u'folderSmartId': files_folder_ID,
+                 u'notReadyIfEmpty': False}
+
+        try:
+            p.create_dataset("FIF_" + file_type_clean, 'FilesInFolder', params=params, formatType="excel", formatParams=None)
+        except:
+            print(file_type_clean + "  already exists")
+
 
