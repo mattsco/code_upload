@@ -13,18 +13,10 @@
     }
   },
   "partitioning": {
-    "filePathPattern": "%M/.*",
+    "filePathPattern": "/.*",
     "ignoreNonMatchingFile": false,
     "considerMissingRequestedPartitionsAsEmpty": false,
-    "dimensions": [
-      {
-        "name": "month",
-        "params": {
-          "period": "MONTH"
-        },
-        "type": "time"
-      }
-    ]
+    "dimensions": []
   },
   "flowOptions": {
     "virtualizable": false,
@@ -102,11 +94,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600613708684
+    "lastModifiedOn": 1600614075721
   },
   "creationTag": {
     "versionNumber": 0,
