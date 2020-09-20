@@ -12,7 +12,7 @@ $.ajax({
 
     f_html = ""
     f_html_upload = "<option value='' selected disabled hidden>Choose a file</option>"
-    data.standard["file_list"].forEach(function(f){
+    data.standard["mandatory"].forEach(function(f){
         var html = `
             <div class="checkbox">
                 <input type="checkbox" name="${f}" id="${f}" />
