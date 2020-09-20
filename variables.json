@@ -11,6 +11,17 @@
     "Optional, upload when there is a change",
     "Optional, upload when there is a change"
   ],
+  "extension": [
+    "xlsx",
+    "xlsx",
+    "xlsx",
+    "xlsx",
+    "xlsx",
+    "xlsx",
+    "xlsx",
+    "xlsx",
+    "xlsx"
+  ],
   "previous_month": "2020-08",
   "tracking_folder": "3zAYHyFW",
   "extention": [
