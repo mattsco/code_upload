@@ -23,6 +23,14 @@
     "xlsx",
     "xlsx"
   ],
+  "list_month": [
+    "2020-09",
+    "2020-08",
+    "2020-07",
+    "2020-06",
+    "2020-05",
+    "2020-04"
+  ],
   "default_file_extension": ".csv",
   "file_list": [
     "AMADEUS_IPP_IPD_MMMYYYY.xls",
