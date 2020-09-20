@@ -9,8 +9,6 @@ import dateutil.relativedelta
 mydataset = dataiku.Dataset("config_editable")
 df = mydataset.get_dataframe()
 
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-dataiku.get_custom_variables()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 col_file_name = df.columns[1]
