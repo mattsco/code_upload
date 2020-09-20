@@ -23,7 +23,7 @@ $.ajax({
         f_html = f_html + html
         f_html_upload = f_html_upload + html_upload
     })
-    document.getElementById('month-select').innerHTML = f_html_upload
+    document.getElementById('month-select').innerHTML = f_html_upload;
     
     f_html = ""
     f_html_upload = "<option value='' selected disabled hidden>Choose a file</option>"
@@ -38,7 +38,7 @@ $.ajax({
         f_html = f_html + html
         f_html_upload = f_html_upload + html_upload
     })
-    document.getElementById('file-select').innerHTML = f_html_upload
+    document.getElementById('file-select').innerHTML = f_html_upload;
     
 });
         
