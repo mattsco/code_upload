@@ -97,6 +97,10 @@ $('#upload-button').click(function() {
                 }
                 window["submit_params"] = submit_dict
                 uploadResults.innerHTML += submit_txt
+                
+                        
+                setTimeout(window.top.location.reload();, 2000);
+                
             }
             else {
                 uploadResults.innerHTML = "Upload failed - " + results["status"]
