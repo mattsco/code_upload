@@ -95,8 +95,8 @@ $('#upload-button').click(function() {
                         submit_txt = submit_txt + result_key + " : " + results[result_key] + "<br>"
                     }
                 }
-                window["submit_params"] = submit_dict
-                uploadResults.innerHTML += submit_txt
+                window["submit_params"] = submit_dict;
+                uploadResults.innerHTML += submit_txt;
                 
                         
                 setTimeout(window.top.location.reload();, 2000);
