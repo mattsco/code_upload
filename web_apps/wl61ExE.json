@@ -4,7 +4,7 @@
   "params": {
     "backendEnabled": true,
     "enableJavascriptModules": false,
-    "autoStartBackend": false,
+    "autoStartBackend": true,
     "hideJSSecurityPanel": false,
     "envSelection": {
       "envMode": "EXPLICIT_ENV",
@@ -39,11 +39,11 @@
   "name": "upload-files",
   "apiKey": "iLgXRqdSDSdQCUfr2MXY5piA7lCWzQMk",
   "versionTag": {
-    "versionNumber": 461,
+    "versionNumber": 462,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600675722250
+    "lastModifiedOn": 1600675737109
   },
   "creationTag": {
     "versionNumber": 0,
