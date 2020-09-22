@@ -145,7 +145,7 @@ def code_recipe():
             list_tracking.append(eval(f.read()))
 
     df_t = pd.DataFrame(list_tracking)
-    if len(df) == 0:
+    if len(df_t) == 0:
         raise Exception("Folders empty")
 
     # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
@@ -195,7 +195,7 @@ def code_recipe():
     output_folder.clear()
     print (df_t.columns)
     for i, row in df_t.iterrows():
-
+        print(i, row)
         file_type = row["file_type"]
         file_name = row["dss_filename"]
         file_stream = archived_folder.get_download_stream(selected_month+"/"+file_name)
