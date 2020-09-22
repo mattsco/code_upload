@@ -99,7 +99,7 @@ $('#upload-button').click(function() {
                 uploadResults.innerHTML += submit_txt;
                 
                         
-                setTimeout(window.top.location.reload(), 3000);
+               // setTimeout(window.top.location.reload(), 3000);
                 
             }
             else {
