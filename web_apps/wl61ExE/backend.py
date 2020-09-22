@@ -200,7 +200,8 @@ def code_recipe():
         print(i, row)
         file_type = row["file_type"]
         file_name = row["dss_filename"]
-        file_stream = archived_folder.get_download_stream(selected_month+"/"+file_name)
+        file_month = row["file_month"]
+        file_stream = archived_folder.get_download_stream(file_month+"/"+file_name)
         file_type_clean = file_type.split(".")[0].replace("-"," ").replace("_"," ").replace("MMMYYYY","")
         for i in range(4):
             file_type_clean = file_type_clean.replace("  "," ").strip() 
