@@ -30,20 +30,24 @@
         "initialReplicas": 1,
         "hpa": false,
         "hpaTargetCPUPercent": 0,
+        "hpaMetrics": [],
         "hpaMinPods": 0,
-        "hpaMaxPods": 0
-      }
-    }
+        "hpaMaxPods": 0,
+        "hpaAnnotations": []
+      },
+      "deploymentModifier": {}
+    },
+    "forceAuthentication": false
   },
   "config": {},
   "name": "upload-files",
   "apiKey": "iLgXRqdSDSdQCUfr2MXY5piA7lCWzQMk",
   "versionTag": {
-    "versionNumber": 462,
+    "versionNumber": 463,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600675737109
+    "lastModifiedOn": 1600792708619
   },
   "creationTag": {
     "versionNumber": 0,

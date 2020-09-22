@@ -39,14 +39,14 @@ def upload_to_dss():
     date = now.strftime("%Y-%m-%d-%H-%M-%S")
   
     
-    selected_month = request.form.get('selected_month')
+    global selected_month = request.form.get('selected_month')
     comment = request.form.get('comment')
     
     dss_filename = '%s_%s_%s.%s' %(selected_month, selected_file.split(".")[0], user, extension)
     
     #Save uploaded file
     try:
-        dataiku.Folder(archive_folder).upload_stream(dss_filename, f)
+        dataiku.Folder(archive_folder).upload_stream(selected_month+"/"+dss_filename, f)
         status = "ok"
     except Exception as e:
         print("fail")
@@ -59,7 +59,7 @@ def upload_to_dss():
     submission["comment"] = comment
 
     try:
-        dataiku.Folder(tracking_folder).upload_stream("%s_%s_%s.json"%(selected_month, selected_file, user), json.dumps(submission))
+        dataiku.Folder(tracking_folder).upload_stream(selected_month+"/"+"%s_%s_%s.json"%(selected_month, selected_file, user), json.dumps(submission))
         status = "ok"
 
     except Exception as e:
@@ -196,7 +196,7 @@ def code_recipe():
 
         file_type = row["file_type"]
         file_name = row["dss_filename"]
-        file_stream = archived_folder.get_download_stream(file_name)
+        file_stream = archived_folder.get_download_stream(selected_month+"/"+file_name)
         file_type_clean = file_type.split(".")[0].replace("-"," ").replace("_"," ").replace("MMMYYYY","")
         for i in range(4):
             file_type_clean = file_type_clean.replace("  "," ").strip() 
