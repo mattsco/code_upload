@@ -2,6 +2,8 @@ import dataiku
 import pandas as pd
 from flask import request
 from datetime import datetime
+import os
+global selected_month
 
 client = dataiku.api_client()
 
@@ -39,7 +41,7 @@ def upload_to_dss():
     date = now.strftime("%Y-%m-%d-%H-%M-%S")
   
     
-    global selected_month = request.form.get('selected_month')
+    selected_month = request.form.get('selected_month')
     comment = request.form.get('comment')
     
     dss_filename = '%s_%s_%s.%s' %(selected_month, selected_file.split(".")[0], user, extension)
