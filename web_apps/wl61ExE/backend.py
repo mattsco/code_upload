@@ -68,6 +68,7 @@ def upload_to_dss():
         print("Submission failed")
         status = str(e)
     
+    code_recipe()
     try:
         code_recipe()
     except:
@@ -195,6 +196,7 @@ def code_recipe():
     output_folder.clear()
     print (df_t.columns)
     for i, row in df_t.iterrows():
+        print("**********************")
         print(i, row)
         file_type = row["file_type"]
         file_name = row["dss_filename"]
