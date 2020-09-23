@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 15,
+    "versionNumber": 16,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600871918801
+    "lastModifiedOn": 1600871984284
   },
   "creationTag": {
     "versionNumber": 0,
@@ -274,7 +274,8 @@
         "basic:COUNT_FILES",
         "basic:SIZE",
         "records:COUNT_RECORDS",
-        "reporting:BUILD_SUCCESS"
+        "reporting:BUILD_SUCCESS",
+        "cell:status:validation_result"
       ]
     }
   },
