@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 12,
+    "versionNumber": 13,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1600615415353
+    "lastModifiedOn": 1600871874492
   },
   "creationTag": {
     "versionNumber": 0,
@@ -121,7 +121,7 @@
         "type": "string"
       }
     ],
-    "userModified": false
+    "userModified": true
   },
   "metrics": {
     "probes": [
@@ -144,6 +144,84 @@
           "level": 0
         },
         "configuration": {}
+      },
+      {
+        "type": "col_stats",
+        "enabled": false,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Columns statistics",
+          "level": 2
+        },
+        "configuration": {
+          "aggregates": []
+        }
+      },
+      {
+        "type": "adv_col_stats",
+        "enabled": false,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Most frequent values",
+          "level": 3
+        },
+        "configuration": {
+          "aggregates": [],
+          "numberTopValues": 10
+        }
+      },
+      {
+        "type": "percentile_stats",
+        "enabled": false,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Columns percentiles",
+          "level": 4
+        },
+        "configuration": {
+          "aggregates": []
+        }
+      },
+      {
+        "type": "verify_col",
+        "enabled": false,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Data validity",
+          "level": 4
+        },
+        "configuration": {
+          "aggregates": []
+        }
+      },
+      {
+        "type": "cell",
+        "enabled": true,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "validation_result",
+          "level": 9
+        },
+        "configuration": {
+          "mode": "FIRST_CELL_OR_NONE",
+          "filter": {
+            "distinct": false,
+            "enabled": true,
+            "uiData": {
+              "mode": "\u0026\u0026",
+              "conditions": [
+                {
+                  "input": "status",
+                  "operator": "\u003d\u003d [string]",
+                  "col": "file_month",
+                  "string": "ok",
+                  "num": 0.0
+                }
+              ]
+            }
+          },
+          "columns": []
+        }
       }
     ],
     "engineConfig": {
@@ -187,6 +265,7 @@
       "python": {}
     },
     "displayedState": {
+      "partition": "NP",
       "columns": [],
       "metrics": [
         "basic:COUNT_COLUMNS",
@@ -200,6 +279,7 @@
     "runOnBuild": false,
     "checks": [],
     "displayedState": {
+      "partition": "NP",
       "checks": []
     }
   },
