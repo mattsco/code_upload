@@ -226,7 +226,7 @@
       }
     }
   },
-  "name": "webapp upload with code",
+  "name": "webapp upload with code (new_feature)",
   "imgPattern": 5,
   "metrics": {
     "probes": [],
@@ -283,11 +283,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 53,
+    "versionNumber": 54,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1601367069682
+    "lastModifiedOn": 1601367072180
   },
   "creationTag": {
     "versionNumber": 0,
@@ -296,7 +296,7 @@
     },
     "lastModifiedOn": 1595298523542
   },
-  "shortDesc": "webapp with logic to upload 9 files\n",
+  "shortDesc": "webapp with logic to upload 9 files\n\nThe project *WEBAPP_UPLOAD_WITH_CODE_NEW_FEATURE* was copied from *WEBAPPUPLOADCODE* by Matt on sept. 29th 2020",
   "tags": [
     "imported",
     "duplicated"
