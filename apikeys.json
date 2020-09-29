@@ -13,11 +13,12 @@
       "runScenarios": false,
       "manageDashboardAuthorizations": false,
       "manageExposedElements": false,
-      "manageAdditionalDashboardUsers": false
+      "manageAdditionalDashboardUsers": false,
+      "executeApp": false
     },
     "onBehalf": "wl61ExE",
     "id": "NfAaEd7vFbFupMAw",
-    "key": "iLgXRqdSDSdQCUfr2MXY5piA7lCWzQMk",
+    "key": "fr4OshH3Meo3lHZNIyBg98eeAohNOLBI",
     "label": "Key for Web app upload-files(wl61ExE)",
     "createdOn": 1595298709225
   }
